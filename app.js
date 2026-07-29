@@ -546,9 +546,8 @@ function renderTechStoryCard(story, containerId, context){
   html += '<button class="selfcheck-btn' + (progress.canExplain === true ? ' active' : '') + '" onclick="setTechStoryCanExplain(\'' + story.id + '\', true, \'' + containerId + '\')">説明できそう</button>';
   html += '<button class="selfcheck-btn' + (progress.canExplain === false ? ' active' : '') + '" onclick="setTechStoryCanExplain(\'' + story.id + '\', false, \'' + containerId + '\')">もう一度読む</button>';
   html += '</div></div>';
-  if(context === 'complete'){
-    html += '<label class="story-optout"><input type="checkbox" onchange="setTechStoryOptOut(this.checked)"' + (getTechStoryOptOut() ? ' checked' : '') + '> 今後、演習後にこの表示をしない</label>';
-  }
+  /* Sprint1: 「今後、演習後にこの表示をしない」チェックボックスは削除。
+     カードを閉じる手段は右上の✕（dismissTechStory）のみとする。 */
   container.innerHTML = html;
 }
 
@@ -1370,6 +1369,26 @@ function startConfirmationQuestion(){
 
   document.getElementById('ex-learning-card-wrap').style.display = 'none';
   document.getElementById('ex-confirm-wrap').style.display = 'block';
+
+  /* 確認問題が刺激文(表・状況設定)を前提とする問題の場合、その刺激文も表示する。
+     以前は問題文だけを表示していたため「このセンサー」「この表」等の指示語が
+     何を指すか分からなくなるバグがあった（Sprint1で修正）。 */
+  const stimulusBox = document.getElementById('ex-confirm-stimulus');
+  if(confirmQ.stimulus){
+    let html = '';
+    if(confirmQ.stimulus.text) html += '<p>' + confirmQ.stimulus.text.replace(/\n/g, '<br>') + '</p>';
+    if(confirmQ.stimulus.table){
+      html += '<table class="stim-table"><thead><tr>' + confirmQ.stimulus.table.headers.map(h => '<th>' + h + '</th>').join('') + '</tr></thead><tbody>' +
+        confirmQ.stimulus.table.rows.map(r => '<tr>' + r.map(c => '<td>' + c + '</td>').join('') + '</tr>').join('') + '</tbody></table>';
+    }
+    if(confirmQ.stimulus.image) html += '<img src="' + confirmQ.stimulus.image + '" style="max-width:100%;border-radius:8px;margin-top:8px;">';
+    stimulusBox.innerHTML = html;
+    stimulusBox.style.display = 'block';
+  } else {
+    stimulusBox.style.display = 'none';
+    stimulusBox.innerHTML = '';
+  }
+
   document.getElementById('ex-confirm-question').textContent = confirmQ.q;
   document.getElementById('ex-confirm-feedback').textContent = '';
   const box = document.getElementById('ex-confirm-choices');
@@ -1380,6 +1399,7 @@ function startConfirmationQuestion(){
     btn.textContent = c;
     btn.onclick = () => answerConfirmation(i);
     box.appendChild(btn);
+
   });
 }
 
