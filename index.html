@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sol Passage Public Preview 0.1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="brand">Sol Passage<span class="brand-sub">Public Preview 0.1</span></span>
+  <span class="streak" id="streak-badge">🔥 3日連続</span>
+</div>
+
+<!-- ============ HOME ============ -->
+<div class="page active" id="page-home">
+  <div class="demo-toggle">
+    <div class="demo-box">
+      <span>表示モード切替（確認用）</span>
+      <span>
+        <button id="btn-mode-new" class="active" onclick="onToggleNew()">はじめて</button>
+        <button id="btn-mode-done" onclick="onToggleDone()">診断済み</button>
+      </span>
+    </div>
+    <div class="demo-box" style="justify-content:flex-end;">
+      <button class="demo-reset-btn" onclick="onResetRecord()">🗑 学習記録をリセット</button>
+    </div>
+  </div>
+
+  <div class="container home-layout">
+    <div class="hero home-left">
+      <h1 id="home-title">今、何を学べばいい？を3〜5分でわかるようにしよう</h1>
+      <p class="lead" id="home-lead">はじめての方は、理解度診断から始めるのがおすすめです。</p>
+    </div>
+
+    <div class="panel home-right">
+      <h2>学習の記録</h2>
+      <div class="history-row">
+        <span class="history-label">今日の学習</span>
+        <span class="history-right">
+          <div class="history-squares" id="history-today-squares">□□□□□</div>
+          <div class="history-sub" id="history-today-sub">あと10分</div>
+        </span>
+      </div>
+      <div class="history-row">
+        <span class="history-label">今週の達成度</span>
+        <span class="history-right">
+          <div class="history-squares week" id="history-week-squares">□□□□□□□</div>
+          <div class="history-sub" id="history-week-sub">0/7日 学習しました</div>
+        </span>
+      </div>
+    </div>
+
+    <div id="home-new" class="home-left">
+      <button class="primary-card" onclick="startDiagnosisIntro()">
+        <span class="arrow">→</span>
+        <span class="tag">3〜5分</span>
+        <p class="big">📝 理解度診断を受ける</p>
+        <p class="sub">今のあなたの理解度がわかります</p>
+      </button>
+      <div class="secondary-row">
+        <button class="secondary-btn" onclick="showPage('practice-select')">
+          <b>🎯 診断なしで演習へ</b>
+          <span>好きな分野からすぐに演習を始める</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="home-done" class="home-left" style="display:none;">
+      <button class="primary-card" onclick="startRecommendedExercise()">
+        <span class="arrow">→</span>
+        <span class="tag">今日のおすすめ5問</span>
+        <p class="big" id="done-weak-label">今日のおすすめ：DNS・URL・IPアドレス</p>
+        <p class="sub">1問1〜2分。5〜10分でサクッと終わります</p>
+      </button>
+      <div class="secondary-row">
+        <button class="secondary-btn" onclick="startDiagnosisIntro()">
+          <b>🔄 理解度をもう一度チェック</b>
+          <span>診断を受け直す</span>
+        </button>
+        <button class="secondary-btn" onclick="showPage('practice-select')">
+          <b>🎯 自由に演習を選ぶ</b>
+          <span>分野を指定して演習する</span>
+        </button>
+      </div>
+
+      <div class="panel level-widget">
+        <h2>今の理解度</h2>
+        <div id="level-bars"></div>
+      </div>
+    </div>
+
+    <div id="tech-story-home" class="story-card home-right" style="display:none;"></div>
+
+    <div class="panel sample-note home-right">
+      <p style="margin:0 0 10px;"><strong>現在は試用版です。</strong>内容や学習記録の保存方法は、今後変更される場合があります。</p>
+      <p style="margin:0;">学習記録は、この端末・ブラウザ内に保存されます。<br>別の端末や別のブラウザには引き継がれません。</p>
+    </div>
+  </div>
+  <footer>Sol Passage Public Preview 0.1</footer>
+</div>
+
+<!-- ============ 診断イントロ ============ -->
+<div class="page" id="page-diagnosis-intro">
+  <div class="container">
+    <button class="back-btn" onclick="goHome()">← トップへ戻る</button>
+    <div class="panel" style="margin-top:16px;">
+      <div class="intro-icon">📝</div>
+      <h2 style="text-align:center;">理解度診断</h2>
+      <p style="text-align:center;color:var(--ink-soft);font-size:13.5px;">全8問・所要時間 約3〜5分<br>毎回違う問題が出題されます</p>
+      <div style="text-align:center;margin-top:10px;">
+        <button class="cta-btn" onclick="beginQuiz()">診断をはじめる</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 診断（クイズ） ============ -->
+<div class="page" id="page-diagnosis">
+  <div class="container">
+    <div style="text-align:right;margin-bottom:8px;"><button class="stop-btn" onclick="openStopConfirm()">🏠 今回はここまで</button></div>
+    <div class="quiz-progress"><div class="quiz-progress-fill" id="quiz-progress-fill" style="width:12%;"></div></div>
+    <div class="quiz-progress-label" id="quiz-progress-label">問 1 / 8</div>
+    <div class="panel">
+      <p class="quiz-q" id="quiz-question"></p>
+      <div id="quiz-choices"></div>
+      <div class="feedback" id="quiz-feedback"></div>
+      <button class="next-btn" id="quiz-next-btn" disabled onclick="nextQuestion()">次へ</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 診断結果 ============ -->
+<div class="page" id="page-diagnosis-result">
+  <div class="container">
+    <button class="back-btn" onclick="goHome()">← トップへ戻る</button>
+    <div class="panel" style="margin-top:16px;">
+      <h2>現在の理解度</h2>
+      <div id="result-level-bars"></div>
+    </div>
+    <div class="weak-callout">
+      <b>今日はこの知識を確認しよう</b>
+      <div class="know-focus-list" id="result-know-focus"></div>
+    </div>
+    <div class="panel" id="result-external-panel" style="display:none;">
+      <h2>もう少し確認したい人へ</h2>
+      <div id="result-external-links"></div>
+    </div>
+    <div class="panel">
+      <h2>今日のおすすめ5問</h2>
+      <div id="result-rec-list"></div>
+      <button class="cta-btn cta-teal" style="width:100%;text-align:center;margin-top:8px;" onclick="startRecommendedExercise()">この5問をはじめる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 自由演習：分野選択 ============ -->
+<div class="page" id="page-practice-select">
+  <div class="container">
+    <button class="back-btn" onclick="goHome()">← トップへ戻る</button>
+    <div class="hero">
+      <h1 style="font-size:19px;">演習する分野を選ぼう</h1>
+      <p class="lead">好きな分野からすぐに演習を始められます</p>
+    </div>
+    <div class="cat-grid">
+      <button class="cat-card" onclick="startCategoryExercise('design')"><div class="icon">🎨</div><div class="name">情報デザイン</div></button>
+      <button class="cat-card" onclick="startCategoryExercise('algo')"><div class="icon">🧮</div><div class="name">アルゴリズム</div></button>
+      <button class="cat-card" onclick="startCategoryExercise('network')"><div class="icon">🌐</div><div class="name">ネットワーク</div></button>
+      <button class="cat-card" onclick="startCategoryExercise('data')"><div class="icon">📊</div><div class="name">データの活用</div></button>
+    </div>
+
+    <div class="panel" style="margin-top:16px;">
+      <h2>🔢 段階別に練習する</h2>
+      <p style="font-size:13px;color:var(--ink-soft);margin:0 0 12px;">基礎 → 応用 → 共通テスト形式 の順に、じっくり練習できます</p>
+      <button class="back-btn" onclick="startKnowledgeRoutePractice('binary-to-decimal')">2進数から10進数への変換を練習する →</button>
+    </div>
+
+    <div class="panel" style="text-align:center;">
+      <p style="margin:0 0 10px;font-size:13px;color:var(--ink-soft);">3〜5分の診断を受けると、あなたに合った問題がわかります</p>
+      <button class="back-btn" onclick="startDiagnosisIntro()">診断を受けてみる →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 演習画面 ============ -->
+<div class="page" id="page-exercise">
+  <div class="container" style="padding-bottom:100px;">
+    <div class="ex-topbar">
+      <span class="ex-tag-group">
+        <span class="ex-cat-tag" id="ex-cat-tag">データの活用</span>
+        <span class="ex-level-tag" id="ex-level-tag">基礎</span>
+      </span>
+      <span class="ex-progress-text" id="ex-progress-text">問 1 / 5</span>
+    </div>
+    <div style="text-align:right;margin-bottom:10px;"><button class="stop-btn" onclick="openStopConfirm()">🏠 今回はここまで</button></div>
+    <div class="panel">
+      <div id="ex-stimulus" class="stimulus-box" style="display:none;"></div>
+      <p class="quiz-q" id="ex-question"></p>
+      <div id="ex-choices"></div>
+
+      <div id="ex-explain" style="display:none;">
+        <span class="correct-badge" id="ex-correct-badge"></span>
+        <div class="explain-box">
+          <h3>解説</h3>
+          <p id="ex-explain-text"></p>
+        </div>
+        <div id="ex-know-wrap" class="know-block">
+          <h3>この問題で確認した知識</h3>
+          <div id="ex-know-chips"></div>
+        </div>
+        <div id="ex-prereq-wrap" class="know-block" style="display:none;">
+          <h3>前提となる知識</h3>
+          <div id="ex-prereq-chips"></div>
+        </div>
+        <div id="ex-related-wrap" class="know-block" style="display:none;">
+          <h3>関連する知識</h3>
+          <div id="ex-related-chips"></div>
+        </div>
+      </div>
+
+      <div id="ex-learning-card-wrap" style="display:none;">
+        <div id="ex-learning-card"></div>
+        <button class="cta-btn cta-teal" style="width:100%;text-align:center;" onclick="startConfirmationQuestion()">確認問題へ進む</button>
+      </div>
+
+      <div id="ex-confirm-wrap" style="display:none;">
+        <h3 class="confirm-title">✅ 確認問題</h3>
+        <p class="quiz-q" id="ex-confirm-question"></p>
+        <div id="ex-confirm-choices"></div>
+        <div class="feedback" id="ex-confirm-feedback"></div>
+      </div>
+
+      <button class="next-btn" id="ex-next-btn" style="display:none;" onclick="nextExercise()">次の問題へ</button>
+    </div>
+  </div>
+  <button class="dict-fab" onclick="openDict()">📖 用語辞典</button>
+</div>
+
+<!-- ============ 「今回はここまで」確認 ============ -->
+<div class="stop-overlay" id="stop-overlay">
+  <div class="stop-panel" id="stop-panel"></div>
+</div>
+
+<!-- ============ 用語辞典（オーバーレイ） ============ -->
+<div class="dict-overlay" id="dict-overlay">
+  <div class="dict-panel">
+    <button class="dict-close" onclick="closeDict()">✕</button>
+    <h2>📖 用語辞典</h2>
+    <input class="dict-search" id="dict-search" placeholder="用語を検索" oninput="renderDict()">
+    <div class="dict-cat-row" id="dict-cat-row"></div>
+    <div id="dict-list"></div>
+  </div>
+</div>
+
+<!-- ============ 完了画面 ============ -->
+<div class="page" id="page-complete">
+  <div class="container">
+    <div class="complete-icon">🎉</div>
+    <p class="complete-title">今日の5問、お疲れさま！</p>
+    <p class="complete-sub">この調子で明日も続けよう</p>
+    <div class="complete-stats">
+      <div class="stat-box"><div class="n" id="complete-correct">4/5</div><div class="l">正解数</div></div>
+      <div class="stat-box"><div class="n">🔥4</div><div class="l">連続日数</div></div>
+    </div>
+    <div style="text-align:center;">
+      <button class="cta-btn" onclick="finishAndGoHome()">トップへ戻る</button>
+    </div>
+
+    <div id="tech-story-complete" class="story-card" style="display:none;margin-top:20px;"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
