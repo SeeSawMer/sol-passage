@@ -66,6 +66,10 @@
           <b>🎯 診断なしで演習へ</b>
           <span>好きな分野からすぐに演習を始める</span>
         </button>
+        <button class="secondary-btn" onclick="openRankingPage()">
+          <b>🏆 記録とランキング</b>
+          <span>自分の記録と順位を見る</span>
+        </button>
       </div>
     </div>
 
@@ -84,6 +88,12 @@
         <button class="secondary-btn" onclick="showPage('practice-select')">
           <b>🎯 自由に演習を選ぶ</b>
           <span>分野を指定して演習する</span>
+        </button>
+      </div>
+      <div class="secondary-row">
+        <button class="secondary-btn" onclick="openRankingPage()">
+          <b>🏆 記録とランキング</b>
+          <span>自分の記録と順位を見る</span>
         </button>
       </div>
 
@@ -271,9 +281,39 @@
     </div>
     <div style="text-align:center;">
       <button class="cta-btn" onclick="finishAndGoHome()">トップへ戻る</button>
+      <button class="back-btn" style="margin-top:10px;" onclick="openRankingPage()">🏆 記録とランキングを見る</button>
     </div>
 
     <div id="tech-story-complete" class="story-card" style="display:none;margin-top:20px;"></div>
+  </div>
+</div>
+
+<!-- ============ 記録とランキング ============ -->
+<div class="page" id="page-ranking">
+  <div class="container">
+    <button class="back-btn" onclick="goHome()">← トップへ戻る</button>
+
+    <div class="panel" style="margin-top:16px;">
+      <h2>あなたの記録</h2>
+      <div class="rank-self-grid">
+        <div class="rank-self-box"><div class="rank-self-n" id="rank-self-rank">-</div><div class="rank-self-l">現在の順位</div></div>
+        <div class="rank-self-box"><div class="rank-self-n" id="rank-self-score">0</div><div class="rank-self-l">総合スコア</div></div>
+        <div class="rank-self-box"><div class="rank-self-n" id="rank-self-best">0</div><div class="rank-self-l">最高得点（1回あたり）</div></div>
+        <div class="rank-self-box"><div class="rank-self-n" id="rank-self-count">0</div><div class="rank-self-l">学習回数</div></div>
+      </div>
+      <p id="rank-status-note" class="rank-status-note"></p>
+    </div>
+
+    <div class="panel">
+      <h2>過去の記録</h2>
+      <div id="rank-history-list"></div>
+    </div>
+
+    <div class="panel">
+      <h2>全体ランキング</h2>
+      <p style="font-size:12px;color:var(--ink-soft);margin:0 0 10px;">氏名・出席番号・ニックネームは表示されません。順位と得点のみが表示されます。</p>
+      <div id="rank-list"></div>
+    </div>
   </div>
 </div>
 

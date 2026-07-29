@@ -1112,6 +1112,158 @@ function updateHomeView(){
 
 function goHome(){ updateHomeView(); showPage('home'); }
 
+/* ===================================================================
+   匿名ランキング / v夏休み版
+   氏名・出席番号・ニックネームは一切収集・送信しない。
+   ランダムな匿名ID（この端末のブラウザだけに保存）とスコアのみを扱う。
+
+   全体順位の集計にはGitHub Pages単体（静的ファイル＋localStorage）では
+   複数端末の記録を集約できないため、Google Apps Script + Googleスプレッド
+   シートをバックエンドとして利用する想定。
+   RANKING_API_URLが未設定の間は、全体ランキングを取得・送信せず、
+   自分の記録（総合スコア・最高得点・学習回数・過去の記録）のみを表示する
+   （エラー表示はしない）。
+=================================================================== */
+const RANKING_API_URL = 'https://script.google.com/macros/s/AKfycbzU1vBRTAn3ry0xZyr6YqPzbNgL_7hx5QRjCNYvD7KVCasfMSL3cwI3qG5pCufvas1Irw/exec'; /* ← ここにGoogle Apps ScriptのWebアプリURL（デプロイ後に発行されるURL）を入力する */
+
+const RANKING_STORAGE_KEYS = { studentId:'infonavi_studentId', stats:'infonavi_rankingStats' };
+
+function getStudentId(){
+  try{
+    let id = localStorage.getItem(RANKING_STORAGE_KEYS.studentId);
+    if(!id){
+      id = 'stu_' + Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
+      localStorage.setItem(RANKING_STORAGE_KEYS.studentId, id);
+    }
+    return id;
+  }catch(e){
+    console.warn('匿名IDを保存できませんでした。今回のセッションのみのIDを使用します', e);
+    return 'stu_temp_' + Math.random().toString(36).slice(2, 10);
+  }
+}
+
+function defaultRankingStats(){ return { totalScore:0, sessionsCount:0, bestSessionScore:0, history:[] }; }
+
+function getRankingStats(){
+  try{
+    const raw = localStorage.getItem(RANKING_STORAGE_KEYS.stats);
+    return raw ? JSON.parse(raw) : defaultRankingStats();
+  }catch(e){
+    console.warn('ランキング記録を読み込めませんでした。記録を初期化します', e);
+    return defaultRankingStats();
+  }
+}
+function saveRankingStats(v){
+  try{ localStorage.setItem(RANKING_STORAGE_KEYS.stats, JSON.stringify(v)); }
+  catch(e){ console.warn('ランキング記録を保存できませんでした', e); }
+}
+
+/* 演習セッション終了時に呼び出す。正解数を総合スコアへ積み上げる（学習を続けるほど伸びる指標）。 */
+function recordSessionScore(correctCount, totalCount){
+  const stats = getRankingStats();
+  stats.totalScore += correctCount;
+  stats.sessionsCount += 1;
+  stats.bestSessionScore = Math.max(stats.bestSessionScore, correctCount);
+  stats.history.push({ correct:correctCount, total:totalCount, at:new Date().toISOString() });
+  if(stats.history.length > 20) stats.history = stats.history.slice(-20);
+  saveRankingStats(stats);
+  submitScoreToRanking(stats.totalScore);
+}
+
+/* URL未設定・通信失敗のいずれでも生徒画面にはエラーを出さない（console.warnのみ）。 */
+function submitScoreToRanking(totalScore){
+  if(!RANKING_API_URL) return;
+  try{
+    fetch(RANKING_API_URL, {
+      method:'POST',
+      headers:{ 'Content-Type':'text/plain;charset=utf-8' },
+      body: JSON.stringify({ studentId:getStudentId(), score: totalScore })
+    }).catch(e => console.warn('ランキングへの送信に失敗しました（通信環境をご確認ください）', e));
+  }catch(e){ console.warn('ランキング送信中にエラーが発生しました', e); }
+}
+
+async function fetchRankingList(){
+  if(!RANKING_API_URL) return null;
+  try{
+    const res = await fetch(RANKING_API_URL + '?action=list');
+    if(!res.ok) throw new Error('response not ok: ' + res.status);
+    return await res.json();
+  }catch(e){ console.warn('全体ランキングを取得できませんでした', e); return null; }
+}
+async function fetchSelfRanking(){
+  if(!RANKING_API_URL) return null;
+  try{
+    const res = await fetch(RANKING_API_URL + '?action=self&studentId=' + encodeURIComponent(getStudentId()));
+    if(!res.ok) throw new Error('response not ok: ' + res.status);
+    return await res.json();
+  }catch(e){ console.warn('自分の順位を取得できませんでした', e); return null; }
+}
+
+function openRankingPage(){
+  showPage('ranking');
+  renderRankingPage();
+}
+
+async function renderRankingPage(){
+  const stats = getRankingStats();
+  document.getElementById('rank-self-score').textContent = stats.totalScore;
+  document.getElementById('rank-self-best').textContent = stats.bestSessionScore;
+  document.getElementById('rank-self-count').textContent = stats.sessionsCount;
+  document.getElementById('rank-self-rank').textContent = '-';
+
+  const historyBox = document.getElementById('rank-history-list');
+  historyBox.innerHTML = '';
+  if(stats.history.length === 0){
+    historyBox.innerHTML = '<p style="font-size:13px;color:var(--ink-soft);">まだ演習の記録がありません。演習を1セット終えると、ここに記録が残ります。</p>';
+  } else {
+    [...stats.history].reverse().forEach(h => {
+      const row = document.createElement('div');
+      row.className = 'rank-history-row';
+      const d = new Date(h.at);
+      const dateLabel = isNaN(d.getTime()) ? '' : (d.getMonth()+1) + '/' + d.getDate();
+      row.innerHTML = '<span>' + h.correct + ' / ' + h.total + ' 問正解</span><span class="rank-history-date">' + dateLabel + '</span>';
+      historyBox.appendChild(row);
+    });
+  }
+
+  const statusNote = document.getElementById('rank-status-note');
+  const rankList = document.getElementById('rank-list');
+
+  if(!RANKING_API_URL){
+    statusNote.textContent = '全体ランキングは準備中です。あなたの記録はこの端末に保存されています。';
+    rankList.innerHTML = '<p style="font-size:13px;color:var(--ink-soft);">全体ランキングは準備中です。</p>';
+    return;
+  }
+
+  statusNote.textContent = '';
+  rankList.innerHTML = '<p style="font-size:13px;color:var(--ink-soft);">読み込み中…</p>';
+
+  const [selfResult, listResult] = await Promise.all([fetchSelfRanking(), fetchRankingList()]);
+
+  if(selfResult && selfResult.found){
+    document.getElementById('rank-self-rank').textContent = selfResult.rank + ' 位';
+  } else {
+    document.getElementById('rank-self-rank').textContent = '-';
+  }
+
+  if(!listResult || !listResult.list){
+    rankList.innerHTML = '<p style="font-size:13px;color:var(--ink-soft);">全体ランキングを読み込めませんでした。あなたの記録は上に表示されています。</p>';
+    return;
+  }
+
+  rankList.innerHTML = '';
+  const myRank = selfResult && selfResult.found ? selfResult.rank : null;
+  listResult.list.forEach(row => {
+    const el = document.createElement('div');
+    const isMe = myRank !== null && row.rank === myRank;
+    el.className = 'rank-row' + (isMe ? ' me' : '');
+    el.innerHTML = '<span class="rank-no">' + row.rank + '位</span><span class="rank-name">' + (isMe ? 'あなた' : '生徒') + '</span><span class="rank-score">' + row.score + '</span>';
+    rankList.appendChild(el);
+  });
+}
+
+
+
 function onToggleNew(){ resetUserState(); updateHomeView(); }
 function onToggleDone(){ initializeDemoState(); updateHomeView(); }
 function onResetRecord(){
@@ -1428,6 +1580,7 @@ function nextExercise(){
     h.weekDays[dayIdx] = true;
     saveStudyHistory(h);
     saveUserState();
+    recordSessionScore(exCorrect, exList.length);
 
     /* 「解答後」表示：5問終了時に1回だけ、扱った知識に関連するコラムがあれば表示する。
        毎回の1問ごとには表示しない。オプトアウトしている場合は表示しない。 */
