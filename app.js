@@ -1826,14 +1826,15 @@ function renderDebugPanel(){
 /* サイト名・エディションラベル・フッター文言をCONFIGから反映する（school-config.js未読込時はCore既定値のまま）。 */
 function applyBranding(){
   const siteName = CONFIG.siteName || 'Sol Passage';
-  const subtitle = CONFIG.editionLabel || CONFIG.siteSubtitle || '';
   const footerText = CONFIG.footerText || siteName;
   document.title = siteName + (CONFIG.editionLabel ? ' | ' + CONFIG.editionLabel : '');
   const nameEl = document.getElementById('brand-name-text');
-  const subEl = document.getElementById('brand-sub');
+  const subtitleEl = document.getElementById('brand-subtitle');
+  const editionEl = document.getElementById('brand-sub');
   const footerEl = document.getElementById('site-footer');
   if(nameEl) nameEl.textContent = siteName;
-  if(subEl) subEl.textContent = subtitle;
+  if(subtitleEl) subtitleEl.textContent = CONFIG.siteSubtitle || '';
+  if(editionEl) editionEl.textContent = CONFIG.editionLabel || '';
   if(footerEl) footerEl.textContent = footerText;
 }
 
