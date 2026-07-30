@@ -12,7 +12,7 @@
 window.SOL_PASSAGE_CONFIG = Object.assign({}, window.SOL_PASSAGE_CONFIG, {
   mode: "school",
   siteName: "Sol Passage",
-  siteSubtitle: "情報Ⅰ 学習ぷらっとフォーム",
+  siteSubtitle: "情報Ⅰ＊学習ぷらっとフォーム",
   editionLabel: "2026　Summer",
   footerText: "Sol Passage Public Preview 0.1",
 
