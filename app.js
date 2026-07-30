@@ -1,4 +1,17 @@
 /* ===================================================================
+   CONFIG BRIDGE
+   config/core-config.js（必須）と config/school-config.js（任意）が
+   window.SOL_PASSAGE_CONFIG を設定してからこのファイルが読み込まれる想定。
+   school-config.js が存在しない場合でも、CONFIGは core-config.js の
+   既定値（空のranking/externalResources等）で安全に動作する。
+=================================================================== */
+const CONFIG = window.SOL_PASSAGE_CONFIG || {
+  mode:'core', siteName:'Sol Passage', siteSubtitle:'情報Ⅰ 学習ナビ', editionLabel:'', footerText:'Sol Passage',
+  features:{ ranking:false, externalResources:false, schoolContent:false, workspaceAuth:false },
+  ranking:{ apiUrl:'' }, externalResources:{}, externalResourceLinks:{}
+};
+
+/* ===================================================================
    DATA LAYER（モック / v1.0）
    今回追加：LEARNING_ROUTES（知識項目ごとの段階別ルート設定を問題データから分離）、
    getQuestionCoverage()（管理者向け・整備状況の集計、生徒画面には未表示）、
@@ -580,30 +593,14 @@ function handleTechStoryRelated(storyId){
 }
 
 /* ===================================================================
-   外部教材リンク（Life is Tech! など） / v1.0-sample
-   問題データや画面に直接URLを書かず、ここで一元管理する。
-   URLを変更したい場合は EXTERNAL_RESOURCES の url を1か所書き換えるだけでよい。
-   単元ごとのURLが確認でき次第、EXTERNAL_RESOURCE_LINKS に knowledgeId 単位で追加できる。
+   外部教材リンク / Core
+   具体的なサービス名・URL・対応表はschool-config.js側の設定に置き、
+   app.jsには一切ハードコードしない。features.externalResourcesが
+   falseの場合、または設定が無い場合は、常に空として安全に動作する
+   （関連パネルは自然に非表示になる）。
 =================================================================== */
-const EXTERNAL_RESOURCES = {
-  lifeIsTechLogin: {
-    id:'life-is-tech-login',
-    label:'Life is Tech! にログイン',
-    url:'', /* ← ここに正式なログインURLを入力してください（未入力の間は自動的に「準備中」表示になります） */
-    note:'学校から案内されたアカウントでログインしてください。',
-    requiresLogin:true,
-    active:true
-  }
-};
-
-/* knowledgeIdごとの対応表。サンプル版では2進数系の5項目のみ、ログイン画面へのリンクを設定。 */
-const EXTERNAL_RESOURCE_LINKS = {
-  'binary-place-value':['life-is-tech-login'],
-  'binary-to-decimal':['life-is-tech-login'],
-  'decimal-to-binary':['life-is-tech-login'],
-  'bit-capacity':['life-is-tech-login'],
-  'binary-addition':['life-is-tech-login']
-};
+const EXTERNAL_RESOURCES = (CONFIG.features && CONFIG.features.externalResources) ? (CONFIG.externalResources || {}) : {};
+const EXTERNAL_RESOURCE_LINKS = (CONFIG.features && CONFIG.features.externalResources) ? (CONFIG.externalResourceLinks || {}) : {};
 
 /* ===================================================================
    参考リンク（REFERENCE_LINKS） / v1.0
@@ -1113,18 +1110,18 @@ function updateHomeView(){
 function goHome(){ updateHomeView(); showPage('home'); }
 
 /* ===================================================================
-   匿名ランキング / v夏休み版
+   匿名ランキング / Core
    氏名・出席番号・ニックネームは一切収集・送信しない。
    ランダムな匿名ID（この端末のブラウザだけに保存）とスコアのみを扱う。
 
    全体順位の集計にはGitHub Pages単体（静的ファイル＋localStorage）では
-   複数端末の記録を集約できないため、Google Apps Script + Googleスプレッド
-   シートをバックエンドとして利用する想定。
-   RANKING_API_URLが未設定の間は、全体ランキングを取得・送信せず、
-   自分の記録（総合スコア・最高得点・学習回数・過去の記録）のみを表示する
-   （エラー表示はしない）。
+   複数端末の記録を集約できないため、共有バックエンド（school-config.js側で
+   設定するAPI URL）を利用する想定。
+   ランキング機能が無効、またはAPI URLが未設定の間は、全体ランキングを
+   取得・送信せず、自分の記録（総合スコア・最高得点・学習回数・過去の記録）
+   のみを表示する（エラー表示はしない）。
 =================================================================== */
-const RANKING_API_URL = 'https://script.google.com/macros/s/AKfycbzU1vBRTAn3ry0xZyr6YqPzbNgL_7hx5QRjCNYvD7KVCasfMSL3cwI3qG5pCufvas1Irw/exec'; /* ← ここにGoogle Apps ScriptのWebアプリURL（デプロイ後に発行されるURL）を入力する */
+const RANKING_API_URL = (CONFIG.features && CONFIG.features.ranking) ? ((CONFIG.ranking && CONFIG.ranking.apiUrl) || '') : '';
 
 const RANKING_STORAGE_KEYS = { studentId:'infonavi_studentId', stats:'infonavi_rankingStats' };
 
@@ -1804,7 +1801,7 @@ function renderDebugPanel(){
   try{ localStorage.setItem('__infonavi_test__', '1'); localStorage.removeItem('__infonavi_test__'); storageOk = true; }
   catch(e){ storageOk = false; }
 
-  const urlSet = !!(EXTERNAL_RESOURCES.lifeIsTechLogin && EXTERNAL_RESOURCES.lifeIsTechLogin.url);
+  const urlSet = Object.keys(EXTERNAL_RESOURCES).some(id => EXTERNAL_RESOURCES[id] && EXTERNAL_RESOURCES[id].url);
   const storyCount = TECH_STORIES.length;
   let qCount = 0;
   Object.values(getQuestionBank()).forEach(arr => { qCount += arr.length; });
@@ -1820,14 +1817,29 @@ function renderDebugPanel(){
       '記事数：' + storyCount + '件<br>' +
       '問題数：' + qCount + '件<br>' +
       '画面幅：' + window.innerWidth + 'px<br>' +
-      'Version：1.0-sample';
+      'Mode：' + (CONFIG.mode || 'core') + (CONFIG.editionLabel ? ' / ' + CONFIG.editionLabel : '');
   }
   update();
   window.addEventListener('resize', update);
 }
 
+/* サイト名・エディションラベル・フッター文言をCONFIGから反映する（school-config.js未読込時はCore既定値のまま）。 */
+function applyBranding(){
+  const siteName = CONFIG.siteName || 'Sol Passage';
+  const subtitle = CONFIG.editionLabel || CONFIG.siteSubtitle || '';
+  const footerText = CONFIG.footerText || siteName;
+  document.title = siteName + (CONFIG.editionLabel ? ' | ' + CONFIG.editionLabel : '');
+  const nameEl = document.getElementById('brand-name-text');
+  const subEl = document.getElementById('brand-sub');
+  const footerEl = document.getElementById('site-footer');
+  if(nameEl) nameEl.textContent = siteName;
+  if(subEl) subEl.textContent = subtitle;
+  if(footerEl) footerEl.textContent = footerText;
+}
+
 /* ===== init ===== */
 LEARNING_ROUTES = buildLearningRoutes();
+applyBranding();
 loadUserState();
 updateHomeView();
 renderDebugPanel();
