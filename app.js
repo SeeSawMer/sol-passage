@@ -11,6 +11,24 @@ const CONFIG = window.SOL_PASSAGE_CONFIG || {
   ranking:{ apiUrl:'' }, externalResources:{}, externalResourceLinks:{}
 };
 
+let QUESTION_BANK = [];
+
+fetch("data/questions_bank.json")
+  .then(res => res.json())
+  .then(data => {
+    QUESTION_BANK = data.questions;
+    console.log("問題数:", QUESTION_BANK.length);
+  });
+
+
+const SAMPLE_BANK = [
+  {
+    questionId: "SAMPLE-001",
+    ...
+  }
+];
+
+
 /* ===================================================================
    DATA LAYER（モック / v1.0）
    今回追加：LEARNING_ROUTES（知識項目ごとの段階別ルート設定を問題データから分離）、
@@ -67,7 +85,7 @@ const KNOWLEDGE_ITEMS = {
 };
 
 /* 問題データ */
-const QUESTION_BANK = {
+const SAMPLE_BANK = {
   design:[
     {id:'d1', category:'design', knowledgeIds:['info-design'], prerequisiteIds:[], relatedKnowledgeIds:['universal-design'], commonTestPriority:1,
      exerciseLevel:'basic', questionType:'direct', stimulus:null,
