@@ -11,22 +11,8 @@ const CONFIG = window.SOL_PASSAGE_CONFIG || {
   ranking:{ apiUrl:'' }, externalResources:{}, externalResourceLinks:{}
 };
 
-let QUESTION_BANK = [];
-
-fetch("data/questions_bank.json")
-  .then(res => res.json())
-  .then(data => {
-    QUESTION_BANK = data.questions;
-    console.log("問題数:", QUESTION_BANK.length);
-  });
 
 
-const SAMPLE_BANK = [
-  {
-    questionId: "SAMPLE-001",
-    ...
-  }
-];
 
 
 /* ===================================================================
