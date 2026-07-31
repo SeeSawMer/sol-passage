@@ -67,7 +67,7 @@ const KNOWLEDGE_ITEMS = {
 };
 
 /* 問題データ */
-const QUESTION_BANK = {
+const QUESTIONS_BANK = {
   design:[
     {id:'d1', category:'design', knowledgeIds:['info-design'], prerequisiteIds:[], relatedKnowledgeIds:['universal-design'], commonTestPriority:1,
      exerciseLevel:'basic', questionType:'direct', stimulus:null,
