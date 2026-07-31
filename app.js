@@ -10,11 +10,6 @@ const CONFIG = window.SOL_PASSAGE_CONFIG || {
   features:{ ranking:false, externalResources:false, schoolContent:false, workspaceAuth:false },
   ranking:{ apiUrl:'' }, externalResources:{}, externalResourceLinks:{}
 };
-
-
-
-
-
 /* ===================================================================
    DATA LAYER（モック / v1.0）
    今回追加：LEARNING_ROUTES（知識項目ごとの段階別ルート設定を問題データから分離）、
