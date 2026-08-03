@@ -66,233 +66,146 @@ const KNOWLEDGE_ITEMS = {
   'binary-addition': {id:'binary-addition', category:'data', term:'2進数の加算', shortDescription:'2進数どうしを足し算する方法', keyPoint:'1の位から順に足し、繰り上がりを次の位へ送る', commonMistake:'繰り上がりを忘れて桁がずれる', example:'0011+0101＝1000', whereUsed:'コンピュータ内部の計算処理全般の基礎', miniColumn:'複雑な計算も、コンピュータの中では最終的に2進数の足し算の積み重ねに分解されています。', takeaway:'繰り上がりを次の位へ送る', relatedIds:['binary-to-decimal'], prerequisiteIds:['binary-to-decimal'], commonTestPriority:1, internalMappings:{textbook:[], commonTest:[], certifications:[]}}
 };
 
-/* 問題データ */
-const QUESTION_BANK = {
-  design:[
-    {id:'d1', category:'design', knowledgeIds:['info-design'], prerequisiteIds:[], relatedKnowledgeIds:['universal-design'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'配色において、情報の階層を示すために使う手法は？', choices:['コントラスト','トリミング','解像度変更','拡大縮小'], correct:0,
-     explanation:'明暗や彩度の差（コントラスト）を使うと、重要な情報を目立たせたり階層を示したりできます。'},
-    {id:'d2', category:'design', knowledgeIds:['universal-design'], prerequisiteIds:[], relatedKnowledgeIds:['info-design'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'誰にでも伝わりやすい図表を作る際に重要なことは？', choices:['色だけで区別する','文字を装飾する','色と形の両方で区別する','情報を減らさない'], correct:2,
-     explanation:'色だけに頼ると、色の区別が難しい人に伝わらないことがあります。色と形の両方を使うと、より多くの人に伝わります。'},
-    {id:'d3', category:'design', knowledgeIds:['universal-design'], prerequisiteIds:[], relatedKnowledgeIds:['info-design'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'多くの人にとって使いやすいデザインを目指す考え方は？', choices:['レスポンシブデザイン','ユニバーサルデザイン','フラットデザイン','マテリアルデザイン'], correct:1,
-     explanation:'年齢や障がいの有無に関わらず、できるだけ多くの人が使えるように設計する考え方です。'},
-    {id:'d4', category:'design', knowledgeIds:['info-design'], prerequisiteIds:[], relatedKnowledgeIds:[], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'情報を誤解なく伝えるために意識すべきことは？', choices:['装飾を増やす','情報を詰め込む','シンプルに整理する','専門用語を多用する'], correct:2,
-     explanation:'情報を詰め込みすぎると伝わりにくくなります。要点を絞ってシンプルに整理することが大切です。'},
-    {id:'d5', category:'design', knowledgeIds:['info-design'], prerequisiteIds:[], relatedKnowledgeIds:['histogram','scatter'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'グラフの種類を選ぶときに大切なことは？', choices:['見た目が派手なものを選ぶ','伝えたい内容に合わせて選ぶ','色数を増やす','データを全て使う'], correct:1,
-     explanation:'割合を伝えたいなら円グラフ、分布を伝えたいならヒストグラムなど、目的に合わせてグラフを選びます。'},
-    {id:'d6', category:'design', knowledgeIds:['universal-design'], prerequisiteIds:[], relatedKnowledgeIds:['info-design'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'ピクトグラム（案内用の絵記号）の役割は？', choices:['装飾のため','言語に関係なく意味を伝える','ファイルサイズを減らす','印刷を楽にする'], correct:1,
-     explanation:'ピクトグラムは絵記号のような表現で、言語が異なっても意味が伝わりやすいという特徴があります。'}
-  ],
-  algo:[
-    {id:'a1', category:'algo', knowledgeIds:['complexity'], prerequisiteIds:['algorithm'], relatedKnowledgeIds:['binary-search','sort'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'アルゴリズムの良し悪しを比較する指標は？', choices:['見た目の美しさ','計算量','使用言語','ファイル名'], correct:1,
-     explanation:'処理にかかるステップ数の目安を計算量といい、O記法で表されます。'},
-    {id:'a2', category:'algo', knowledgeIds:['iteration'], prerequisiteIds:['algorithm'], relatedKnowledgeIds:['branch'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'同じ処理を繰り返すプログラムの構造は？', choices:['分岐','逐次','反復','例外処理'], correct:2,
-     explanation:'同じ処理を繰り返す構造を反復（ループ）といいます。プログラムの基本構造の一つです。'},
-    {id:'a3', category:'algo', knowledgeIds:['binary-search'], prerequisiteIds:['complexity'], relatedKnowledgeIds:['complexity'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'探索アルゴリズムで、要素数nに対して計算量がO(log n)になるのは？', choices:['線形探索','二分探索','バブルソート','選択ソート'], correct:1,
-     explanation:'二分探索は探索範囲を半分ずつ絞り込むため、要素数が増えても効率よく探索できます。'},
-    {id:'a4', category:'algo', knowledgeIds:['branch'], prerequisiteIds:['algorithm'], relatedKnowledgeIds:['iteration'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'条件によって処理を切り替えるプログラムの構造は？', choices:['逐次','分岐','反復','例外処理'], correct:1,
-     explanation:'条件に応じて実行する処理を切り替える構造を分岐といいます。'},
-    {id:'a5', category:'algo', knowledgeIds:['sort'], prerequisiteIds:['complexity'], relatedKnowledgeIds:['complexity'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'データを一定の順序に並べ替える処理の目的は？', choices:['データを探しやすくする','データを暗号化する','データを削除する','データを圧縮する'], correct:0,
-     explanation:'昇順・降順に並べ替える（ソートする）と、後の検索や処理がしやすくなります。'},
-    {id:'a6', category:'algo', knowledgeIds:['flowchart'], prerequisiteIds:['algorithm'], relatedKnowledgeIds:['branch','iteration'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'処理の流れを図で表したものを何という？', choices:['フローチャート','ヒストグラム','データベース','プロトコル'], correct:0,
-     explanation:'処理の流れを図で表したものをフローチャートといい、アルゴリズムを可視化するのに使われます。'},
-    {id:'app-complexity', category:'algo', knowledgeIds:['complexity','binary-search'], prerequisiteIds:['algorithm'], relatedKnowledgeIds:['binary-search'], commonTestPriority:2,
-     exerciseLevel:'application', questionType:'situational',
-     stimulus:{text:'1万件のデータの中から目的のデータを探すプログラムを作ることになった。データはあらかじめ昇順に並んでいる。', table:null, image:null},
-     q:'このとき、効率よく探索するために選ぶべき方法は？', choices:['先頭から1件ずつ確認する線形探索','範囲を半分ずつ絞り込む二分探索','データをすべてランダムに並べ替えてから探す','データを1件ずつ削除しながら探す'], correct:1,
-     explanation:'データが並んでいる場合、二分探索を使うと探索範囲を半分ずつ絞り込めるため、線形探索より効率よく目的のデータを見つけられます。'},
-    {id:'mini-complexity', category:'algo', knowledgeIds:['complexity'], prerequisiteIds:['algorithm'], relatedKnowledgeIds:['binary-search','sort'], commonTestPriority:2,
-     exerciseLevel:'common-test-mini', questionType:'mini-passage',
-     stimulus:{text:'あるプログラムは、データの数が2倍になると、処理にかかるステップ数もおよそ2倍になる。別のプログラムは、データの数が2倍になっても、処理にかかるステップ数はわずかしか増えない。', table:null, image:null},
-     q:'一般的に、大量のデータを扱う場合に効率が良いといえるのは？', choices:['データの数が2倍になってもステップ数がわずかしか増えないプログラム','データの数が2倍になるとステップ数も2倍になるプログラム','どちらも同じ効率である','データの数とステップ数は関係がない'], correct:0,
-     explanation:'計算量が小さい（データが増えてもステップ数の増加が緩やかな）アルゴリズムほど、大量のデータを扱う際に効率がよいといえます。'},
-    {id:'int-algo', category:'algo', knowledgeIds:['complexity','binary-search','sort'], prerequisiteIds:['algorithm'], relatedKnowledgeIds:['complexity'], commonTestPriority:2,
-     exerciseLevel:'integrated', questionType:'combined',
-     stimulus:{text:'大量のデータの中から特定のデータを何度も検索するプログラムを作ることになった。データは検索のたびに変化しない。', table:null, image:null},
-     q:'効率よく検索を行うための工夫として最も適切なものは？', choices:['あらかじめデータをソートしておき、二分探索で検索する','検索のたびにデータをランダムに並べ替える','データを1件ずつ手作業で確認する','検索のたびにすべてのデータを削除して作り直す'], correct:0,
-     explanation:'あらかじめデータをソート（並べ替え）しておくことで二分探索が使えるようになり、検索を効率化できます。ソートと探索の組み合わせが計算量の削減につながります。'}
-  ],
-  network:[
-    {id:'n1', category:'network', knowledgeIds:['http'], prerequisiteIds:['url'], relatedKnowledgeIds:['url','dns'], commonTestPriority:3,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'Webページを閲覧する際に主に使われるプロトコルは？', choices:['SMTP','FTP','HTTP','DNS'], correct:2,
-     explanation:'Webブラウザとサーバーがページ情報をやり取りする際の通信規約（プロトコル）がHTTPです。'},
-    {id:'n2', category:'network', knowledgeIds:['ip-address'], prerequisiteIds:[], relatedKnowledgeIds:['dns','url'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'IPアドレスの役割は？', choices:['機器を一意に識別する','データを暗号化する','画面を表示する','電力を供給する'], correct:0,
-     explanation:'ネットワーク上の機器を識別するための番号がIPアドレスです。住所のような役割を果たします。'},
-    {id:'n3', category:'network', knowledgeIds:['dns'], prerequisiteIds:['ip-address','domain-name'], relatedKnowledgeIds:['ip-address','domain-name'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'ドメイン名をIPアドレスに変換する仕組みは？', choices:['DNS','URL','HTTP','IPアドレス'], correct:0,
-     explanation:'人が覚えやすいドメイン名を、機器が使うIPアドレスに変換する仕組みをDNSといいます。'},
-    {id:'n4', category:'network', knowledgeIds:['encryption'], prerequisiteIds:[], relatedKnowledgeIds:['http'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'通信内容を第三者から守るための技術は？', choices:['HTML','暗号化','ピクセル','キャッシュ'], correct:1,
-     explanation:'通信内容を第三者に読み取られないようにする技術を暗号化といいます。'},
-    {id:'n5', category:'network', knowledgeIds:['url'], prerequisiteIds:['domain-name'], relatedKnowledgeIds:['dns','domain-name'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'インターネット上の情報の場所を示す文字列は？', choices:['URL','DNS','IPアドレス','HTTP'], correct:0,
-     explanation:'インターネット上の情報の場所を示す文字列をURLといいます。'},
-    {id:'n6', category:'network', knowledgeIds:['wifi'], prerequisiteIds:[], relatedKnowledgeIds:['ip-address'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'ケーブルなしで機器をネットワークに接続する無線通信の規格は？', choices:['Wi-Fi','USB','HDMI','SDカード'], correct:0,
-     explanation:'ケーブルを使わずに機器をネットワークに接続する無線通信の規格をWi-Fiといいます。'},
-    {id:'app-ip', category:'network', knowledgeIds:['ip-address'], prerequisiteIds:[], relatedKnowledgeIds:['dns','url'], commonTestPriority:2,
-     exerciseLevel:'application', questionType:'situational',
-     stimulus:{text:'家庭内のルーターには、複数の機器が接続されている。それぞれの機器を区別して通信するために、ルーターは各機器に固有の番号を割り当てている。', table:null, image:null},
-     q:'このとき、各機器に割り当てられている固有の番号を何というか。', choices:['IPアドレス','パスワード','ファイル名','ポート名'], correct:0,
-     explanation:'ネットワーク上の機器を識別するための番号がIPアドレスです。ルーターは接続された機器ごとにIPアドレスを割り当てて区別します。'},
-    {id:'mini-ip', category:'network', knowledgeIds:['ip-address'], prerequisiteIds:[], relatedKnowledgeIds:['dns'], commonTestPriority:2,
-     exerciseLevel:'common-test-mini', questionType:'mini-passage',
-     stimulus:{text:'ある学校のネットワークでは、教室のPCに192.168.1.1から192.168.1.40までの番号が割り当てられている。', table:null, image:null},
-     q:'この番号の並びが表しているものとして最も適切なものは？', choices:['それぞれのPCを識別するIPアドレス','PCのパスワード','ネットワークの回線速度','PCの購入日'], correct:0,
-     explanation:'192.168.1.1のような形式の番号はIPアドレスであり、ネットワーク上の機器を一つずつ識別するために使われます。'},
-    {id:'app-dns', category:'network', knowledgeIds:['dns'], prerequisiteIds:['ip-address','domain-name'], relatedKnowledgeIds:['ip-address','domain-name'], commonTestPriority:2,
-     exerciseLevel:'application', questionType:'situational',
-     stimulus:{text:'ブラウザにWebサイトのドメイン名を入力してアクセスしようとしたが、ページが表示されず、「サーバーが見つかりません」というエラーが出た。', table:null, image:null},
-     q:'このエラーの原因として考えられることは？', choices:['ドメイン名をIPアドレスに変換する仕組みがうまく働いていない','キーボードの電池が切れている','画面の明るさが低すぎる','マウスが接続されていない'], correct:0,
-     explanation:'ドメイン名をIPアドレスに変換する仕組みがDNSです。DNSがうまく機能しないと、ドメイン名を入力してもサーバーに接続できません。'},
-    {id:'mini-dns', category:'network', knowledgeIds:['dns'], prerequisiteIds:['ip-address','domain-name'], relatedKnowledgeIds:['url'], commonTestPriority:2,
-     exerciseLevel:'common-test-mini', questionType:'mini-passage',
-     stimulus:{text:'表は、あるドメイン名とそれに対応するIPアドレスの一部である。', table:{headers:['ドメイン名','IPアドレス'], rows:[['example.jp','203.0.113.10'],['school.jp','203.0.113.25']]}, image:null},
-     q:'この表のような対応関係を管理し、ドメイン名からIPアドレスへの変換を行う仕組みは？', choices:['DNS','HTTP','URL','Wi-Fi'], correct:0,
-     explanation:'ドメイン名とIPアドレスの対応を管理し、変換を行う仕組みがDNSです。'},
-    {id:'app-http', category:'network', knowledgeIds:['http'], prerequisiteIds:['url'], relatedKnowledgeIds:['encryption','url'], commonTestPriority:3,
-     exerciseLevel:'application', questionType:'situational',
-     stimulus:{text:'あるオンラインショップの支払いページのURLは「https://」から始まっていた。', table:null, image:null},
-     q:'「https」の「s」が示していることとして最も適切なものは？', choices:['通信が暗号化されていること','ページの表示速度が速いこと','画像が多く使われていること','広告が表示されないこと'], correct:0,
-     explanation:'HTTPS（HTTP＋暗号化）では通信内容が暗号化され、第三者に読み取られにくくなります。「s」はセキュア（secure）を表します。'},
-    {id:'mini-http', category:'network', knowledgeIds:['http'], prerequisiteIds:['url'], relatedKnowledgeIds:['dns','url'], commonTestPriority:3,
-     exerciseLevel:'common-test-mini', questionType:'mini-passage',
-     stimulus:{text:'Webブラウザでページを表示するまでの流れを簡単に表すと、次のようになる。\n① ドメイン名をIPアドレスに変換する\n② サーバーにページの情報を要求する\n③ ページの情報を受け取り表示する', table:null, image:null},
-     q:'②の「サーバーにページの情報を要求する」際に使われる通信の約束事は？', choices:['HTTP','DNS','IPアドレス','Wi-Fi'], correct:0,
-     explanation:'Webブラウザとサーバーがページ情報をやり取りする際の通信規約がHTTPです。'},
-    {id:'int-network', category:'network', knowledgeIds:['ip-address','dns','http','url'], prerequisiteIds:['ip-address','domain-name'], relatedKnowledgeIds:['dns','url','http'], commonTestPriority:3,
-     exerciseLevel:'integrated', questionType:'combined',
-     stimulus:{text:'ブラウザにWebサイトのURLを入力してからページが表示されるまでの流れを、次の4つの出来事に分けた。\nA. サーバーからページの情報が送られてくる\nB. ドメイン名がIPアドレスに変換される\nC. ブラウザにページが表示される\nD. サーバーにページの情報が要求される', table:null, image:null},
-     q:'A〜Dを正しい順序に並べたものは？', choices:['B→D→A→C','D→B→A→C','B→A→D→C','D→A→B→C'], correct:0,
-     explanation:'まずドメイン名がDNSによってIPアドレスに変換され（B）、そのIPアドレス宛にHTTPでページが要求され（D）、サーバーから情報が送られ（A）、最後にブラウザに表示されます（C）。'}
-  ],
-  data:[
-    {id:'t1', category:'data', knowledgeIds:['histogram'], prerequisiteIds:[], relatedKnowledgeIds:['scatter'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'次のうち、データの分布を見るのに最も適したグラフは？', choices:['ヒストグラム','円グラフ','折れ線グラフ','散布図'], correct:0,
-     explanation:'データがどの範囲に多く分布しているかを、棒の高さで表すグラフがヒストグラムです。'},
-    {id:'t3', category:'data', knowledgeIds:['scatter'], prerequisiteIds:[], relatedKnowledgeIds:['histogram'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'2つの量的データの関係を調べるのに使うグラフは？', choices:['散布図','棒グラフ','円グラフ','ヒストグラム'], correct:0,
-     explanation:'2つの量的データの関係性を点の集まりで表すグラフを散布図といいます。'},
-    {id:'t4', category:'data', knowledgeIds:['stddev'], prerequisiteIds:['scatter'], relatedKnowledgeIds:['scatter'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'データのばらつきの大きさを示す指標は？', choices:['平均値','標準偏差','中央値','最頻値'], correct:1,
-     explanation:'データの散らばり具合を数値で表したものが標準偏差です。値が大きいほどばらつきが大きいことを示します。'},
-    {id:'t5', category:'data', knowledgeIds:['data-utilization'], prerequisiteIds:['histogram','scatter'], relatedKnowledgeIds:['histogram','scatter'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'大量のデータから規則性を見つけ出し役立てることの総称は？', choices:['データの活用','データ入力','データ削除','データ印刷'], correct:0,
-     explanation:'大量のデータを分析し、規則性や傾向を見つけて役立てることをデータの活用といいます。'},
-    {id:'t6', category:'data', knowledgeIds:['data-utilization'], prerequisiteIds:['histogram'], relatedKnowledgeIds:['histogram','scatter'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'グラフを作る際に注意すべきことは？', choices:['できるだけ派手にする','誤解を与えない表現にする','データを全部隠す','数値を丸めすぎる'], correct:1,
-     explanation:'軸の範囲やグラフの種類によって印象が変わるため、誤解を与えないように表現することが大切です。'},
-    {id:'app-histogram', category:'data', knowledgeIds:['histogram'], prerequisiteIds:[], relatedKnowledgeIds:['scatter'], commonTestPriority:2,
-     exerciseLevel:'application', questionType:'situational',
-     stimulus:{text:'あるクラスの小テストの得点を集計したところ、60点台の生徒が最も多く、点数が離れるほど人数が少なくなる傾向が見られた。', table:null, image:null},
-     q:'このような得点の散らばり方を視覚的に確認するのに適したグラフは？', choices:['ヒストグラム','円グラフ','折れ線グラフ','ピクトグラム'], correct:0,
-     explanation:'得点などのデータがどの範囲に多く集まっているかという分布を見るには、ヒストグラムが適しています。'},
-    {id:'mini-histogram', category:'data', knowledgeIds:['histogram'], prerequisiteIds:[], relatedKnowledgeIds:['data-utilization'], commonTestPriority:2,
-     exerciseLevel:'common-test-mini', questionType:'mini-passage',
-     stimulus:{text:'表は、あるクラス40人の小テストの得点を10点ごとに区切って人数をまとめたものである。', table:{headers:['得点の範囲','人数'], rows:[['0〜19点','2人'],['20〜39点','5人'],['40〜59点','10人'],['60〜79点','15人'],['80〜100点','8人']]}, image:null},
-     q:'この表の内容をグラフに表す場合、最も適切なグラフは？', choices:['ヒストグラム','円グラフ','散布図','ピクトグラム'], correct:0,
-     explanation:'区切られた範囲ごとの人数（度数）を棒の高さで表すヒストグラムが、この表の内容を表すのに適しています。'},
-    {id:'int-data', category:'data', knowledgeIds:['histogram','scatter','data-utilization'], prerequisiteIds:['histogram','scatter'], relatedKnowledgeIds:['histogram','scatter'], commonTestPriority:2,
-     exerciseLevel:'integrated', questionType:'combined',
-     stimulus:{text:'あるクラブの活動データを分析することになった。まず得点の分布を確認し、次に練習時間と得点の関係を確認し、最後にそれらをふまえて今後の練習方針を考えることにした。', table:null, image:null},
-     q:'この分析の流れの中で、「得点の分布を確認する」段階と「練習時間と得点の関係を確認する」段階で、それぞれ使うのに適したグラフの組み合わせは？', choices:['ヒストグラムと散布図','円グラフと折れ線グラフ','散布図とヒストグラム','ピクトグラムと円グラフ'], correct:0,
-     explanation:'分布を見るにはヒストグラム、2つの量の関係を見るには散布図が適しています。このように複数のグラフを目的に応じて使い分けることが、データの活用につながります。'},
+/* ===================================================================
+   問題データ / JSON外部読込
+   正式データは data/questions.json に置く。
+   JSONの正式仕様を、既存画面が利用している内部形式へ読込時に変換する。
+=================================================================== */
 
-    /* --- 2進数：位取り／10進変換／2進変換／ビット数／加算 --- */
-    {id:'bpv-basic-1', category:'data', knowledgeIds:['binary-place-value'], prerequisiteIds:[], relatedKnowledgeIds:['binary-to-decimal'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'2進数の1101において、一番左の桁（最上位ビット）が表す10進数の値は？', choices:['1','2','4','8'], correct:3,
-     explanation:'2進数の各桁は右から2の0乗、2の1乗、2の2乗…の位を表します。4桁目（左端）は2の3乗＝8の位です。'},
-
-    {id:'t2', category:'data', knowledgeIds:['binary-to-decimal'], prerequisiteIds:['binary-place-value'], relatedKnowledgeIds:['binary-place-value'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'2進数の1011を10進数に変換すると？', choices:['9','11','13','15'], correct:1,
-     explanation:'1011は、8の位が1、4の位が0、2の位が1、1の位が1なので、8+0+2+1=11になります。'},
-    {id:'bd-basic-2', category:'data', knowledgeIds:['binary-to-decimal'], prerequisiteIds:['binary-place-value'], relatedKnowledgeIds:['binary-place-value'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'2進数の1100を10進数に変換すると？', choices:['10','12','14','16'], correct:1,
-     explanation:'1100は、8の位が1、4の位が1、2の位が0、1の位が0なので、8+4=12になります。'},
-    {id:'bd-basic-3', category:'data', knowledgeIds:['binary-to-decimal'], prerequisiteIds:['binary-place-value'], relatedKnowledgeIds:['binary-place-value'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'2進数の0111を10進数に変換すると？', choices:['5','6','7','8'], correct:2,
-     explanation:'0111は、4の位が1、2の位が1、1の位が1なので、4+2+1=7になります。'},
-    {id:'bd-app-1', category:'data', knowledgeIds:['binary-to-decimal'], prerequisiteIds:['binary-place-value'], relatedKnowledgeIds:['bit-capacity'], commonTestPriority:2,
-     exerciseLevel:'application', questionType:'situational',
-     stimulus:{text:'あるセンサーは、測定値を4ビットの2進数で記録している。記録された値が1011だった。', table:null, image:null},
-     q:'この値を10進数で表すといくつか。', choices:['9','10','11','13'], correct:2,
-     explanation:'1011を10進数に変換すると、8+0+2+1=11になります。'},
-    {id:'bd-app-2', category:'data', knowledgeIds:['binary-to-decimal'], prerequisiteIds:['binary-place-value'], relatedKnowledgeIds:['bit-capacity'], commonTestPriority:2,
-     exerciseLevel:'application', questionType:'situational',
-     stimulus:{text:'ある照明のコントローラーは、明るさの設定を4ビットの2進数で管理している。現在の設定値は1001である。', table:null, image:null},
-     q:'この設定値を10進数で表すといくつか。', choices:['7','8','9','10'], correct:2,
-     explanation:'1001を10進数に変換すると、8+0+0+1=9になります。'},
-    {id:'bd-mini-1', category:'data', knowledgeIds:['binary-to-decimal'], prerequisiteIds:['binary-place-value'], relatedKnowledgeIds:['binary-addition'], commonTestPriority:2,
-     exerciseLevel:'common-test-mini', questionType:'mini-passage',
-     stimulus:{text:'ある装置では、状態を4ビットの2進数で記録している。状態Aは1011、状態Bは0110である。', table:null, image:null},
-     q:'状態Aと状態Bを10進数に変換したとき、その差はいくつか。', choices:['3','5','7','9'], correct:1,
-     explanation:'状態Aは1011＝11、状態Bは0110＝6です。文章から2つの値を読み取り、それぞれ10進数に変換してから差を求めると、11－6＝5になります。'},
-    {id:'bd-mini-2', category:'data', knowledgeIds:['binary-to-decimal'], prerequisiteIds:['binary-place-value'], relatedKnowledgeIds:['binary-addition'], commonTestPriority:2,
-     exerciseLevel:'common-test-mini', questionType:'mini-passage',
-     stimulus:{text:'あるシステムでは、通知の優先度を4ビットの2進数で表している。優先度Xは1101、優先度Yは1010である。', table:null, image:null},
-     q:'優先度Xと優先度Yを10進数に変換したとき、値が大きいのはどちらか、またその差はいくつか。', choices:['Xの方が3大きい','Yの方が3大きい','Xの方が5大きい','Yの方が2大きい'], correct:0,
-     explanation:'優先度Xは1101＝13、優先度Yは1010＝10です。それぞれ変換してから比較すると、Xの方が3大きいことがわかります。'},
-    {id:'bd-int-1', category:'data', knowledgeIds:['binary-to-decimal','bit-capacity'], prerequisiteIds:['binary-place-value'], relatedKnowledgeIds:['binary-place-value'], commonTestPriority:2,
-     exerciseLevel:'integrated', questionType:'combined',
-     stimulus:{text:'ある温度センサーは、測定値を4ビットの2進数で記録している。記録できる値の範囲は0000から1111までである。', table:null, image:null},
-     q:'このセンサーが記録した値が1110のとき、10進数で表した値と、4ビットで表現できる値の最大数の組み合わせとして正しいものは？', choices:['10進数14、最大16通り','10進数14、最大15通り','10進数15、最大16通り','10進数12、最大16通り'], correct:0,
-     explanation:'1110を10進数に変換すると8+4+2=14です。4ビットでは0000〜1111の16通り（2の4乗）の値を表現できます。10進数への変換とビット数の知識を組み合わせて答える問題です。'},
-
-    {id:'dtb-basic-1', category:'data', knowledgeIds:['decimal-to-binary'], prerequisiteIds:['binary-to-decimal'], relatedKnowledgeIds:['binary-to-decimal'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'10進数の13を2進数で表すと？', choices:['1101','1011','1110','1010'], correct:0,
-     explanation:'13は8+4+1なので、8の位・4の位・1の位が1、2の位が0となり、1101と表されます。'},
-
-    {id:'bc-basic-1', category:'data', knowledgeIds:['bit-capacity'], prerequisiteIds:['binary-place-value'], relatedKnowledgeIds:['binary-place-value'], commonTestPriority:2,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'4ビットの2進数で表現できる数は何通りか。', choices:['8通り','15通り','16通り','32通り'], correct:2,
-     explanation:'1ビットにつき2通りの状態を表せるため、4ビットでは2の4乗＝16通りの値を表現できます。'},
-
-    {id:'ba-basic-1', category:'data', knowledgeIds:['binary-addition'], prerequisiteIds:['binary-to-decimal'], relatedKnowledgeIds:['binary-to-decimal'], commonTestPriority:1,
-     exerciseLevel:'basic', questionType:'direct', stimulus:null,
-     q:'2進数の0011と0101を足すと？', choices:['1000','0111','1001','0110'], correct:0,
-     explanation:'0011（10進数で3）と0101（10進数で5）を足すと10進数で8になり、2進数では1000と表されます。'}
-  ]
+let QUESTION_BANK = {
+  design: [],
+  algo: [],
+  network: [],
+  data: []
 };
+
+const KNOWLEDGE_ID_ALIASES = {
+  'DESIGN-INFO':'info-design',
+  'DESIGN-UNIVERSAL':'universal-design',
+  'PROG-ALGORITHM':'complexity',
+  'PROG-SEARCH':'binary-search',
+  'PROG-SORT':'sort',
+  'PROG-BRANCH':'branch',
+  'PROG-LOOP':'iteration',
+  'PROG-SEQUENCE':'flowchart',
+  'NET-DNS':'dns',
+  'NET-IP':'ip-address',
+  'NET-URL':'url',
+  'NET-HTTP':'http',
+  'NET-WIFI':'wifi',
+  'SEC-CRYPT':'encryption',
+  'DATA-HIST':'histogram',
+  'DATA-SCATTER':'scatter',
+  'DATA-STAT':'stddev',
+  'DATA-DECISION':'data-utilization',
+  'DATA-GRAPH':'data-utilization',
+  'DIG-BIN':'binary-to-decimal',
+  'DIG-BIT':'bit-capacity'
+};
+
+const UNIT_TO_CATEGORY = {
+  DESIGN:'design',
+  PROGRAMMING:'algo',
+  NETWORK:'network',
+  SECURITY:'network',
+  DATA:'data',
+  DIGITAL:'data'
+};
+
+const JSON_LEVEL_TO_STAGE = {
+  basic:'basic',
+  application:'application',
+  commonTestMini:'common-test-mini',
+  integrated:'integrated'
+};
+
+const AUTO_KNOWLEDGE_LABELS = {
+  'PROG-TRACE':'トレース',
+  'PROG-VARIABLE':'変数',
+  'NET-HTTPS':'HTTPS',
+  'SEC-AUTH':'認証',
+  'SEC-CIA':'情報セキュリティの3要素',
+  'SEC-MALWARE':'マルウェア',
+  'SEC-PHISH':'フィッシング',
+  'DIG-CHAR':'文字コード',
+  'DIG-HEX':'16進数',
+  'DIG-MEDIA':'画像・音声のデジタル化'
+};
+
+function toRuntimeKnowledgeId(id){
+  return KNOWLEDGE_ID_ALIASES[id] || id;
+}
+
+function ensureRuntimeKnowledgeItem(officialId, category){
+  const runtimeId = toRuntimeKnowledgeId(officialId);
+  if(KNOWLEDGE_ITEMS[runtimeId]) return runtimeId;
+
+  KNOWLEDGE_ITEMS[runtimeId] = {
+    id: runtimeId,
+    category: category,
+    term: AUTO_KNOWLEDGE_LABELS[officialId] || officialId,
+    shortDescription: 'この知識項目の学習カードは準備中です。',
+    relatedIds: [],
+    prerequisiteIds: [],
+    commonTestPriority: 1,
+    internalMappings: { textbook:[], commonTest:[], certifications:[] }
+  };
+  return runtimeId;
+}
+
+function convertOfficialQuestionToRuntime(q){
+  const category = UNIT_TO_CATEGORY[q.unit] || 'data';
+  const mainKnowledgeId = ensureRuntimeKnowledgeItem(q.knowledgeId, category);
+
+  const relatedIds = (q.relatedKnowledge || [])
+    .map(id => ensureRuntimeKnowledgeItem(id, UNIT_TO_CATEGORY[String(id).split('-')[0]] || category))
+    .filter(id => id !== mainKnowledgeId);
+
+  const choiceIds = (q.choices || []).map(c => c.id);
+  const correctIndex = choiceIds.indexOf(q.answer);
+
+  if(correctIndex < 0){
+    throw new Error(q.questionId + ': answer が choices 内にありません。');
+  }
+
+  return {
+    id: q.questionId,
+    category: category,
+    knowledgeIds: [mainKnowledgeId],
+    prerequisiteIds: [],
+    relatedKnowledgeIds: [...new Set(relatedIds)],
+    commonTestPriority: 1,
+    exerciseLevel: JSON_LEVEL_TO_STAGE[q.level] || 'basic',
+    questionType: q.questionType || 'single',
+    stimulus: q.stimulus || null,
+    q: q.question,
+    choices: (q.choices || []).map(c => c.text),
+    correct: correctIndex,
+    explanation: q.explanation
+  };
+}
+
+async function loadQuestionBank(){
+  const response = await fetch('./data/questions.json', { cache:'no-store' });
+  if(!response.ok){
+    throw new Error('問題データを読み込めませんでした（HTTP ' + response.status + '）');
+  }
+
+  const payload = await response.json();
+  if(!payload || !Array.isArray(payload.questions)){
+    throw new Error('questions.json の形式が正しくありません。');
+  }
+
+  const bank = { design:[], algo:[], network:[], data:[] };
+  payload.questions.forEach(q => {
+    const converted = convertOfficialQuestionToRuntime(q);
+    bank[converted.category].push(converted);
+  });
+
+  QUESTION_BANK = bank;
+  window.SOL_PASSAGE_QUESTION_COUNT = payload.questions.length;
+  console.info('問題データを読み込みました:', payload.questions.length + '問');
+}
 
 /* ===================================================================
    「教科書の外、だけど中。」（TECH_STORIES） / v1.0
@@ -1826,7 +1739,7 @@ function renderDebugPanel(){
 /* サイト名・エディションラベル・フッター文言をCONFIGから反映する（school-config.js未読込時はCore既定値のまま）。 */
 function applyBranding(){
   const siteName = CONFIG.siteName || 'Sol Passage';
-  const footerText = CONFIG.footerText || siteName;
+  const footerText = `Sol Passage v0.2 Preview<br>問題数：${window.SOL_PASSAGE_QUESTION_COUNT || 0}問<br>© 2026 Sol Passage 編集部<br>非営利の学習目的で利用できます。無断転載・改変・再配布は禁止します。`;
   document.title = siteName + (CONFIG.editionLabel ? ' | ' + CONFIG.editionLabel : '');
   const nameEl = document.getElementById('brand-name-text');
   const subtitleEl = document.getElementById('brand-subtitle');
@@ -1835,12 +1748,34 @@ function applyBranding(){
   if(nameEl) nameEl.textContent = siteName;
   if(subtitleEl) subtitleEl.textContent = CONFIG.siteSubtitle || '';
   if(editionEl) editionEl.textContent = CONFIG.editionLabel || '';
-  if(footerEl) footerEl.textContent = footerText;
+  if(footerEl) footerEl.innerHTML = footerText;
 }
 
 /* ===== init ===== */
-LEARNING_ROUTES = buildLearningRoutes();
-applyBranding();
-loadUserState();
-updateHomeView();
-renderDebugPanel();
+async function initializeApp(){
+  
+
+  try{
+    await loadQuestionBank();
+    applyBranding();
+    LEARNING_ROUTES = buildLearningRoutes();
+    loadUserState();
+    updateHomeView();
+    renderDebugPanel();
+  }catch(error){
+    console.error(error);
+    const message = '問題データの読み込みに失敗しました。data/questions.json の配置と内容を確認してください。';
+    const home = document.getElementById('home');
+    if(home){
+      const notice = document.createElement('div');
+      notice.className = 'card';
+      notice.style.margin = '20px';
+      notice.innerHTML = '<h2>データ読込エラー</h2><p>' + message + '</p><p style="font-size:12px;">' + String(error.message || error) + '</p>';
+      home.prepend(notice);
+    }else{
+      alert(message);
+    }
+  }
+}
+
+initializeApp();
