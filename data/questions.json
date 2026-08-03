@@ -1,0 +1,5847 @@
+{
+  "questions": [
+    {
+      "questionId": "DIG-BIN-Q01",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "basic",
+      "questionType": "single",
+      "question": "コンピュータが内部で利用している数の表し方として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "2進数"
+        },
+        {
+          "id": "B",
+          "text": "8進数"
+        },
+        {
+          "id": "C",
+          "text": "10進数"
+        },
+        {
+          "id": "D",
+          "text": "16進数"
+        }
+      ],
+      "answer": "A",
+      "explanation": "コンピュータは電気のON・OFFを利用するため、0と1で表す2進数を基本として処理を行います。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIN-Q02",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "basic",
+      "questionType": "single",
+      "question": "2進数「1010」を10進数で表したものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "answer": "C",
+      "explanation": "1010₂＝1×8＋0×4＋1×2＋0×1＝10です。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DIG-HEX"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIN-Q03",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "application",
+      "questionType": "single",
+      "question": "コンピュータが2進数を利用する理由として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "電気のON・OFFの2つの状態で表現しやすいため"
+        },
+        {
+          "id": "B",
+          "text": "人間が計算しやすいため"
+        },
+        {
+          "id": "C",
+          "text": "数字を書く量を減らせるため"
+        },
+        {
+          "id": "D",
+          "text": "10進数より桁数が少なくなるため"
+        }
+      ],
+      "answer": "A",
+      "explanation": "電子回路では電流が流れる・流れないという2状態を利用するため、2進数との相性がよくなっています。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIN-Q04",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "application",
+      "questionType": "single",
+      "question": "4ビットで表すことのできる値として最も適切な説明はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "0～15の16通り"
+        },
+        {
+          "id": "B",
+          "text": "0～8の9通り"
+        },
+        {
+          "id": "C",
+          "text": "0～4の5通り"
+        },
+        {
+          "id": "D",
+          "text": "0～31の32通り"
+        }
+      ],
+      "answer": "A",
+      "explanation": "4ビットでは2⁴＝16通りの状態を表現できるため、0～15を表すことができます。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIN-Q05",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある電子機器では、スイッチ4個のON・OFFの組合せによって設定を切り替えている。4個すべての組合せを利用すると、設定は最大で何通り表現できるか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "8通り"
+        },
+        {
+          "id": "B",
+          "text": "12通り"
+        },
+        {
+          "id": "C",
+          "text": "16通り"
+        },
+        {
+          "id": "D",
+          "text": "32通り"
+        }
+      ],
+      "answer": "C",
+      "explanation": "スイッチ1個は2状態（ON・OFF）です。4個では2⁴＝16通りの組合せになります。これは4ビットで表せる状態数と同じ考え方です。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DIG-BIT",
+        "DIG-HEX"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIT-Q01",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "1バイトは何ビットで構成されているか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "4ビット"
+        },
+        {
+          "id": "B",
+          "text": "8ビット"
+        },
+        {
+          "id": "C",
+          "text": "16ビット"
+        },
+        {
+          "id": "D",
+          "text": "32ビット"
+        }
+      ],
+      "answer": "B",
+      "explanation": "1バイト（Byte）は8ビット（bit）で構成されています。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DIG-BIN"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIT-Q02",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "3ビットで表現できる状態は全部で何通りか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "6通り"
+        },
+        {
+          "id": "B",
+          "text": "8通り"
+        },
+        {
+          "id": "C",
+          "text": "9通り"
+        },
+        {
+          "id": "D",
+          "text": "16通り"
+        }
+      ],
+      "answer": "B",
+      "explanation": "nビットでは2ⁿ通り表現できます。3ビットでは2³＝8通りです。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DIG-BIN"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIT-Q03",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIT",
+      "level": "application",
+      "questionType": "single",
+      "question": "USBメモリやSSDの容量が「64GB」「256GB」のように表されるのは、何を示しているためか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "保存できるデータ量"
+        },
+        {
+          "id": "B",
+          "text": "通信速度"
+        },
+        {
+          "id": "C",
+          "text": "CPUの処理能力"
+        },
+        {
+          "id": "D",
+          "text": "画面の解像度"
+        }
+      ],
+      "answer": "A",
+      "explanation": "GB（ギガバイト）は記憶装置に保存できるデータ量を表す単位です。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DIG-MEDIA"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIT-Q04",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIT",
+      "level": "application",
+      "questionType": "single",
+      "question": "4ビットと8ビットを比べたとき、8ビットで表現できる状態数として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "16通り"
+        },
+        {
+          "id": "B",
+          "text": "64通り"
+        },
+        {
+          "id": "C",
+          "text": "128通り"
+        },
+        {
+          "id": "D",
+          "text": "256通り"
+        }
+      ],
+      "answer": "D",
+      "explanation": "8ビットでは2⁸＝256通り表現できます。4ビットの16通りより大幅に多くなります。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DIG-BIN"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIT-Q05",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIT",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある電子錠では、0と1だけを使った6ビットの暗証番号を設定できる。同じ番号を重複なく設定できる最大数は何通りか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "32通り"
+        },
+        {
+          "id": "B",
+          "text": "64通り"
+        },
+        {
+          "id": "C",
+          "text": "128通り"
+        },
+        {
+          "id": "D",
+          "text": "256通り"
+        }
+      ],
+      "answer": "B",
+      "explanation": "6ビットでは2⁶＝64通りの状態を表現できます。この考え方は情報量やデジタルデータの表現の基本になります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DIG-BIN",
+        "DIG-HEX"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-CHAR-Q01",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-CHAR",
+      "level": "basic",
+      "questionType": "single",
+      "question": "コンピュータで文字を表現するために利用されるものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "文字コード"
+        },
+        {
+          "id": "B",
+          "text": "解像度"
+        },
+        {
+          "id": "C",
+          "text": "サンプリング周波数"
+        },
+        {
+          "id": "D",
+          "text": "フレームレート"
+        }
+      ],
+      "answer": "A",
+      "explanation": "コンピュータでは文字を文字コードによって数値に対応付けて表現します。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-CHAR-Q02",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-CHAR",
+      "level": "basic",
+      "questionType": "single",
+      "question": "文字コードが異なる環境でファイルを開いたときに起こりやすい現象はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "文字化け"
+        },
+        {
+          "id": "B",
+          "text": "画像がぼやける"
+        },
+        {
+          "id": "C",
+          "text": "音量が小さくなる"
+        },
+        {
+          "id": "D",
+          "text": "通信速度が低下する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "異なる文字コードで文字を解釈すると、本来の文字とは異なる表示になり、文字化けが発生することがあります。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-CHAR-Q03",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-CHAR",
+      "level": "application",
+      "questionType": "single",
+      "question": "海外で作成されたテキストファイルを開いたところ、一部の日本語が正しく表示されなかった。最も考えられる原因はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "文字コードが一致していない"
+        },
+        {
+          "id": "B",
+          "text": "画面の解像度が低い"
+        },
+        {
+          "id": "C",
+          "text": "インターネットに接続していない"
+        },
+        {
+          "id": "D",
+          "text": "CPUの性能が不足している"
+        }
+      ],
+      "answer": "A",
+      "explanation": "作成時と閲覧時で異なる文字コードが使用されると、文字化けが起こることがあります。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "NET-HTTP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-CHAR-Q04",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-CHAR",
+      "level": "application",
+      "questionType": "single",
+      "question": "ASCIIとUnicodeを比較した説明として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Unicodeは多くの言語の文字を統一的に扱える"
+        },
+        {
+          "id": "B",
+          "text": "ASCIIはすべての国の文字を表現できる"
+        },
+        {
+          "id": "C",
+          "text": "Unicodeは数字しか表現できない"
+        },
+        {
+          "id": "D",
+          "text": "ASCIIとUnicodeは常に同じ文字数を扱う"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Unicodeは世界中の多くの文字を統一的に扱うために作られた文字コードです。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-CHAR-Q05",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-CHAR",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "文化祭の案内文を別のパソコンで開いたところ、日本語だけが『���』のように表示された。一方、英数字は正しく表示されていた。この原因として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "日本語部分の文字コードを正しく解釈できなかった"
+        },
+        {
+          "id": "B",
+          "text": "画像データが破損していた"
+        },
+        {
+          "id": "C",
+          "text": "DNSが正しく動作していなかった"
+        },
+        {
+          "id": "D",
+          "text": "IPアドレスが重複していた"
+        }
+      ],
+      "answer": "A",
+      "explanation": "英数字だけが表示され、日本語が文字化けしている場合は、文字コードの違いが原因である可能性が高いと考えられます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DIG-BIT",
+        "NET-HTTP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-HEX-Q01",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-HEX",
+      "level": "basic",
+      "questionType": "single",
+      "question": "16進数で使用する記号として適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "0～9とA～F"
+        },
+        {
+          "id": "B",
+          "text": "0～15"
+        },
+        {
+          "id": "C",
+          "text": "A～P"
+        },
+        {
+          "id": "D",
+          "text": "0～9だけ"
+        }
+      ],
+      "answer": "A",
+      "explanation": "16進数では0～9に加え、10～15をA～Fで表します。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DIG-BIN"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-HEX-Q02",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-HEX",
+      "level": "basic",
+      "questionType": "single",
+      "question": "16進数「A」が表す10進数の値はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "11"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "answer": "B",
+      "explanation": "16進数ではA=10、B=11、C=12、D=13、E=14、F=15です。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DIG-BIN"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-HEX-Q03",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-HEX",
+      "level": "application",
+      "questionType": "single",
+      "question": "Webページの色指定で「#FF0000」のような表記が使われる理由として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "16進数でRGBの値を簡潔に表せるため"
+        },
+        {
+          "id": "B",
+          "text": "10進数より計算しやすいため"
+        },
+        {
+          "id": "C",
+          "text": "文字数を必ず半分にできるため"
+        },
+        {
+          "id": "D",
+          "text": "画像を圧縮するため"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTMLやCSSではRGBの色を16進数で表すことが一般的です。例えば #FF0000 は赤を表します。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DIG-MEDIA"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-HEX-Q04",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-HEX",
+      "level": "application",
+      "questionType": "single",
+      "question": "16進数が2進数と相性がよい理由として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "16進数1桁が2進数4桁に対応するため"
+        },
+        {
+          "id": "B",
+          "text": "どちらも10種類の数字を使うため"
+        },
+        {
+          "id": "C",
+          "text": "どちらも人間が日常的に使うため"
+        },
+        {
+          "id": "D",
+          "text": "16進数の方が桁数が必ず多くなるため"
+        }
+      ],
+      "answer": "A",
+      "explanation": "16＝2⁴なので、16進数1桁は2進数4ビットと対応し、変換が容易です。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DIG-BIN",
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-HEX-Q05",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-HEX",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある機器では、4ビットごとに16進数へ変換してデータを表示している。2進数「11111111」は16進数でどのように表されるか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "7F"
+        },
+        {
+          "id": "B",
+          "text": "FF"
+        },
+        {
+          "id": "C",
+          "text": "F7"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "B",
+      "explanation": "1111は16進数でFです。11111111は1111と1111に分けられるため、FFとなります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DIG-BIN",
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-MEDIA-Q01",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-MEDIA",
+      "level": "basic",
+      "questionType": "single",
+      "question": "デジタル画像を構成する最小単位はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "画素（ピクセル）"
+        },
+        {
+          "id": "B",
+          "text": "サンプル"
+        },
+        {
+          "id": "C",
+          "text": "フレーム"
+        },
+        {
+          "id": "D",
+          "text": "ビットマップフォント"
+        }
+      ],
+      "answer": "A",
+      "explanation": "デジタル画像は、多数の画素（ピクセル）が集まって構成されています。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-MEDIA-Q02",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-MEDIA",
+      "level": "basic",
+      "questionType": "single",
+      "question": "音声をデジタル化するとき、一定時間ごとに音の大きさを測定する操作を何というか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "標本化（サンプリング）"
+        },
+        {
+          "id": "B",
+          "text": "暗号化"
+        },
+        {
+          "id": "C",
+          "text": "圧縮"
+        },
+        {
+          "id": "D",
+          "text": "復号"
+        }
+      ],
+      "answer": "A",
+      "explanation": "標本化（サンプリング）は、一定時間ごとに音の大きさを測定する操作です。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-MEDIA-Q03",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-MEDIA",
+      "level": "application",
+      "questionType": "single",
+      "question": "スマートフォンで撮影した写真の画素数を増やすと、一般的にどのような変化が起こるか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "より細かく表現できるが、データ量も大きくなりやすい"
+        },
+        {
+          "id": "B",
+          "text": "画質は変わらず、データ量だけ小さくなる"
+        },
+        {
+          "id": "C",
+          "text": "音質が向上する"
+        },
+        {
+          "id": "D",
+          "text": "通信方式がHTTPSに変わる"
+        }
+      ],
+      "answer": "A",
+      "explanation": "画素数が増えると表現できる情報量が増えますが、その分データ量も大きくなる傾向があります。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-MEDIA-Q04",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-MEDIA",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のうち、画像データ量が最も大きくなる条件はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "画素数も色数も多い"
+        },
+        {
+          "id": "B",
+          "text": "画素数は少なく色数も少ない"
+        },
+        {
+          "id": "C",
+          "text": "画素数は少なく色数だけ多い"
+        },
+        {
+          "id": "D",
+          "text": "画素数だけ多く色数は少ない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "画像データ量は、画素数と1画素当たりの情報量（色数）によって決まります。両方が大きいほどデータ量も大きくなります。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-MEDIA-Q05",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-MEDIA",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "文化祭で配布するポスターを印刷することになった。A案は画素数を2倍にし、色の表現も増やした画像、B案は画素数だけを2倍にした画像である。ファイルサイズについて最も適切な説明はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "A案の方がB案よりデータ量が大きくなる可能性が高い"
+        },
+        {
+          "id": "B",
+          "text": "A案とB案のデータ量は必ず同じになる"
+        },
+        {
+          "id": "C",
+          "text": "B案の方が必ずデータ量が大きい"
+        },
+        {
+          "id": "D",
+          "text": "画素数や色数はデータ量に影響しない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "画像データ量は画素数と1画素当たりの情報量の両方に影響されます。そのため、両方を増やしたA案の方がデータ量は大きくなる可能性が高くなります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DIG-BIT",
+        "DIG-CHAR"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-DNS-Q01",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-DNS",
+      "level": "basic",
+      "questionType": "single",
+      "question": "DNSの役割として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ドメイン名をIPアドレスに対応付ける"
+        },
+        {
+          "id": "B",
+          "text": "Webページを暗号化する"
+        },
+        {
+          "id": "C",
+          "text": "電子メールを送信する"
+        },
+        {
+          "id": "D",
+          "text": "画像を圧縮する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "DNSは、人が覚えやすいドメイン名をIPアドレスに対応付ける仕組みです。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-DNS-Q02",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-DNS",
+      "level": "basic",
+      "questionType": "single",
+      "question": "次のうち、DNSによって名前が変換されるものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "URL"
+        },
+        {
+          "id": "B",
+          "text": "ドメイン名"
+        },
+        {
+          "id": "C",
+          "text": "HTML"
+        },
+        {
+          "id": "D",
+          "text": "メール本文"
+        }
+      ],
+      "answer": "B",
+      "explanation": "DNSはドメイン名をIPアドレスへ変換します。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "NET-IP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-DNS-Q03",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-DNS",
+      "level": "application",
+      "questionType": "single",
+      "question": "ブラウザに「www.example.com」と入力するだけでWebページが表示できる理由として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "DNSが対応するIPアドレスを調べるから"
+        },
+        {
+          "id": "B",
+          "text": "ブラウザが毎回新しいIPアドレスを作るから"
+        },
+        {
+          "id": "C",
+          "text": "HTTPがドメイン名を数字へ変換するから"
+        },
+        {
+          "id": "D",
+          "text": "URLが自動的に暗号化されるから"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ブラウザはDNSを利用してドメイン名に対応するIPアドレスを調べます。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "NET-IP",
+        "NET-URL"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-DNS-Q04",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-DNS",
+      "level": "application",
+      "questionType": "single",
+      "question": "DNSが存在しない場合、Webサイトへアクセスするには何が必要になるか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "毎回IPアドレスを直接入力する"
+        },
+        {
+          "id": "B",
+          "text": "HTMLを自分で作成する"
+        },
+        {
+          "id": "C",
+          "text": "HTTPSを利用する"
+        },
+        {
+          "id": "D",
+          "text": "画像を圧縮する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "DNSがなければ、利用者はIPアドレスを直接指定してアクセスする必要があります。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "NET-IP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-DNS-Q05",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-DNS",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある学校で『ブラウザにWebサイト名を入力するとページが表示されないが、IPアドレスを直接入力すると表示できる』という現象が起きた。この原因として最も考えられるものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "DNSが正しく利用できていない"
+        },
+        {
+          "id": "B",
+          "text": "ディスプレイの解像度が低い"
+        },
+        {
+          "id": "C",
+          "text": "画像ファイルが壊れている"
+        },
+        {
+          "id": "D",
+          "text": "HTMLの文字コードが異なる"
+        }
+      ],
+      "answer": "A",
+      "explanation": "IPアドレスでは接続できるため、通信そのものではなく、ドメイン名をIPアドレスへ変換するDNSの問題と考えられます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "NET-IP",
+        "NET-URL",
+        "NET-HTTP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTP-Q01",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTP",
+      "level": "basic",
+      "questionType": "single",
+      "question": "HTTPの役割として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Webページなどのデータをやり取りするための通信手順"
+        },
+        {
+          "id": "B",
+          "text": "IPアドレスをドメイン名へ変換する仕組み"
+        },
+        {
+          "id": "C",
+          "text": "画像ファイルを圧縮する方式"
+        },
+        {
+          "id": "D",
+          "text": "電子メールを送信するソフトウェア"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTPは、WebブラウザとWebサーバがデータを送受信するための通信手順です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTP-Q02",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTP",
+      "level": "basic",
+      "questionType": "single",
+      "question": "URLの先頭にある「http://」が表しているものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "通信に利用するプロトコル"
+        },
+        {
+          "id": "B",
+          "text": "IPアドレス"
+        },
+        {
+          "id": "C",
+          "text": "Webページの名前"
+        },
+        {
+          "id": "D",
+          "text": "サーバのOS"
+        }
+      ],
+      "answer": "A",
+      "explanation": "「http」は、通信方法（プロトコル）を表しています。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "NET-URL"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTP-Q03",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTP",
+      "level": "application",
+      "questionType": "single",
+      "question": "ブラウザでWebページを開くとき、HTTPは主にどの機器の間で利用されるか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "WebブラウザとWebサーバ"
+        },
+        {
+          "id": "B",
+          "text": "キーボードとディスプレイ"
+        },
+        {
+          "id": "C",
+          "text": "プリンタとスキャナ"
+        },
+        {
+          "id": "D",
+          "text": "スマートフォンとBluetoothイヤホン"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTPは、ブラウザからサーバへ要求を送り、サーバからWebページを受け取るために利用されます。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "NET-URL"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTP-Q04",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTP",
+      "level": "application",
+      "questionType": "single",
+      "question": "HTTPとDNSの役割の違いとして最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "HTTPはWebページのデータを送受信し、DNSはドメイン名をIPアドレスへ対応付ける"
+        },
+        {
+          "id": "B",
+          "text": "HTTPはIPアドレスを割り当て、DNSは画像を表示する"
+        },
+        {
+          "id": "C",
+          "text": "HTTPはメールを送信し、DNSは動画を圧縮する"
+        },
+        {
+          "id": "D",
+          "text": "HTTPとDNSはまったく同じ役割を持つ"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTPはWebデータの送受信、DNSはドメイン名とIPアドレスの対応付けを行います。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "NET-DNS",
+        "NET-IP",
+        "NET-URL"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTP-Q05",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTP",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある生徒がブラウザで学校のホームページを開いたところ、まずドメイン名からIPアドレスが調べられ、その後Webページが表示された。このとき、Webページのデータを受け取るために利用されたプロトコルとして最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "HTTP"
+        },
+        {
+          "id": "B",
+          "text": "DNS"
+        },
+        {
+          "id": "C",
+          "text": "JPEG"
+        },
+        {
+          "id": "D",
+          "text": "PNG"
+        }
+      ],
+      "answer": "A",
+      "explanation": "DNSでIPアドレスを調べた後、HTTPを利用してWebサーバからWebページのデータを受信します。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "NET-DNS",
+        "NET-IP",
+        "NET-URL",
+        "NET-HTTPS"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTPS-Q01",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTPS",
+      "level": "basic",
+      "questionType": "single",
+      "question": "HTTPSの説明として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "HTTPによる通信を暗号化した通信方式"
+        },
+        {
+          "id": "B",
+          "text": "IPアドレスを管理する仕組み"
+        },
+        {
+          "id": "C",
+          "text": "Webページを作成する言語"
+        },
+        {
+          "id": "D",
+          "text": "画像を圧縮する方式"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTPSはHTTP通信を暗号化することで、通信内容を第三者に読み取られにくくします。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "NET-HTTP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTPS-Q02",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTPS",
+      "level": "basic",
+      "questionType": "single",
+      "question": "ブラウザのアドレス欄に表示される「https://」が示しているものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "通信が暗号化されていること"
+        },
+        {
+          "id": "B",
+          "text": "画像が圧縮されていること"
+        },
+        {
+          "id": "C",
+          "text": "通信速度が速いこと"
+        },
+        {
+          "id": "D",
+          "text": "Webページが無料であること"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTPSは暗号化通信を利用していることを表します。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "NET-HTTP",
+        "NET-URL"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTPS-Q03",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTPS",
+      "level": "application",
+      "questionType": "single",
+      "question": "インターネットで商品を購入するとき、HTTPSが利用される主な理由として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "個人情報やカード情報を安全に送受信するため"
+        },
+        {
+          "id": "B",
+          "text": "画像の画質を向上させるため"
+        },
+        {
+          "id": "C",
+          "text": "Webページを自動的に翻訳するため"
+        },
+        {
+          "id": "D",
+          "text": "通信に必要なIPアドレスを変更するため"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTPSは通信を暗号化し、個人情報やクレジットカード情報などを保護します。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "NET-HTTP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTPS-Q04",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTPS",
+      "level": "application",
+      "questionType": "single",
+      "question": "HTTPとHTTPSの違いとして最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "HTTPSはHTTPに暗号化機能を加え、安全性を高めた通信方式である"
+        },
+        {
+          "id": "B",
+          "text": "HTTPだけがWebページを表示できる"
+        },
+        {
+          "id": "C",
+          "text": "HTTPSではURLを利用しない"
+        },
+        {
+          "id": "D",
+          "text": "HTTPは画像専用、HTTPSは文字専用である"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTPSはHTTPの通信内容を暗号化し、安全性を向上させたものです。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "NET-HTTP",
+        "NET-URL"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-HTTPS-Q05",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTPS",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある生徒がネットショップAとBを利用した。AのURLは「https://」、BのURLは「http://」で始まっていた。個人情報を入力する場面でAの方が適している理由として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "HTTPSでは通信内容が暗号化され、盗み見される危険性を低減できるため"
+        },
+        {
+          "id": "B",
+          "text": "HTTPSではDNSを利用しないため"
+        },
+        {
+          "id": "C",
+          "text": "HTTPSではIPアドレスが不要になるため"
+        },
+        {
+          "id": "D",
+          "text": "HTTPSでは画像の表示速度が必ず速くなるため"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTPSは通信内容を暗号化するため、ログイン情報や個人情報を扱うWebサイトで広く利用されています。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "NET-HTTP",
+        "NET-URL",
+        "NET-DNS",
+        "SEC-CRYPT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-IP-Q01",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-IP",
+      "level": "basic",
+      "questionType": "single",
+      "question": "IPアドレスの役割として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ネットワーク上の機器を識別する"
+        },
+        {
+          "id": "B",
+          "text": "Webページを暗号化する"
+        },
+        {
+          "id": "C",
+          "text": "画像の色数を増やす"
+        },
+        {
+          "id": "D",
+          "text": "メール本文を圧縮する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "IPアドレスは、ネットワーク上で通信相手となる機器を識別するための番号です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-IP-Q02",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-IP",
+      "level": "basic",
+      "questionType": "single",
+      "question": "次のうち、IPv4アドレスの表記例として適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "192.168.1.10"
+        },
+        {
+          "id": "B",
+          "text": "www.example.com"
+        },
+        {
+          "id": "C",
+          "text": "https://example.com"
+        },
+        {
+          "id": "D",
+          "text": "user@example.com"
+        }
+      ],
+      "answer": "A",
+      "explanation": "IPv4アドレスは、0～255の数字を4組、ピリオドで区切って表します。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "NET-DNS"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-IP-Q03",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-IP",
+      "level": "application",
+      "questionType": "single",
+      "question": "家庭内のパソコンやスマートフォンがインターネットへ接続できるのは、それぞれの機器に何が割り当てられるためか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "IPアドレス"
+        },
+        {
+          "id": "B",
+          "text": "HTML"
+        },
+        {
+          "id": "C",
+          "text": "JPEG"
+        },
+        {
+          "id": "D",
+          "text": "DNSサーバ"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ネットワークに接続された機器にはIPアドレスが割り当てられ、通信相手として識別されます。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "NET-DNS"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-IP-Q04",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-IP",
+      "level": "application",
+      "questionType": "single",
+      "question": "同じネットワーク内で2台の機器に同じIPアドレスが設定された場合、最も起こりやすい問題はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "正常に通信できなくなることがある"
+        },
+        {
+          "id": "B",
+          "text": "画像の画質が低下する"
+        },
+        {
+          "id": "C",
+          "text": "Webページが自動的に暗号化される"
+        },
+        {
+          "id": "D",
+          "text": "メールが文字化けする"
+        }
+      ],
+      "answer": "A",
+      "explanation": "同じIPアドレスを複数の機器が使用すると、通信先を正しく識別できず通信障害の原因になります。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "NET-DNS"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-IP-Q05",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-IP",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある学校では、Webサイト名ではアクセスできないが、IPアドレスを入力するとWebページが表示された。また、同じネットワーク内で通信が不安定な端末があった。この2つの原因として最も適切な組合せはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "DNSの設定不良と、IPアドレスの重複"
+        },
+        {
+          "id": "B",
+          "text": "HTTPの停止と、画像サイズの増加"
+        },
+        {
+          "id": "C",
+          "text": "HTMLの誤りと、JPEG圧縮"
+        },
+        {
+          "id": "D",
+          "text": "URLの短縮と、メールサーバの停止"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Webサイト名で接続できない原因はDNSの問題が考えられます。また、同一ネットワークで同じIPアドレスを使用すると通信障害が発生することがあります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "NET-DNS",
+        "NET-URL",
+        "NET-HTTP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-URL-Q01",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-URL",
+      "level": "basic",
+      "questionType": "single",
+      "question": "URLの説明として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Webページやファイルの場所を表す情報"
+        },
+        {
+          "id": "B",
+          "text": "コンピュータを識別する番号"
+        },
+        {
+          "id": "C",
+          "text": "Webページを暗号化する仕組み"
+        },
+        {
+          "id": "D",
+          "text": "電子メールを送信する仕組み"
+        }
+      ],
+      "answer": "A",
+      "explanation": "URLは、インターネット上のWebページやファイルの場所を表します。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-URL-Q02",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-URL",
+      "level": "basic",
+      "questionType": "single",
+      "question": "URL「https://www.example.com/index.html」の「www.example.com」の部分は何と呼ばれるか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ドメイン名"
+        },
+        {
+          "id": "B",
+          "text": "IPアドレス"
+        },
+        {
+          "id": "C",
+          "text": "ファイル名"
+        },
+        {
+          "id": "D",
+          "text": "プロトコル"
+        }
+      ],
+      "answer": "A",
+      "explanation": "URLの中で「www.example.com」はドメイン名です。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "NET-DNS"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-URL-Q03",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-URL",
+      "level": "application",
+      "questionType": "single",
+      "question": "友人から送られてきたWebページを開きたい。最も必要となる情報はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "そのWebページのURL"
+        },
+        {
+          "id": "B",
+          "text": "送信者のメールアドレス"
+        },
+        {
+          "id": "C",
+          "text": "パソコンの機種名"
+        },
+        {
+          "id": "D",
+          "text": "画像ファイルの形式"
+        }
+      ],
+      "answer": "A",
+      "explanation": "URLが分かれば、ブラウザから目的のWebページへアクセスできます。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "NET-HTTP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-URL-Q04",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-URL",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のうち、URLとIPアドレスの違いとして最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "URLは場所を表す情報であり、IPアドレスは通信相手の機器を識別する番号である"
+        },
+        {
+          "id": "B",
+          "text": "URLは画像専用、IPアドレスは文字専用である"
+        },
+        {
+          "id": "C",
+          "text": "URLは暗号化を行い、IPアドレスは圧縮を行う"
+        },
+        {
+          "id": "D",
+          "text": "URLとIPアドレスは常に同じ意味である"
+        }
+      ],
+      "answer": "A",
+      "explanation": "URLは場所を表し、IPアドレスはネットワーク上の機器を識別する番号です。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "NET-IP",
+        "NET-DNS"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-URL-Q05",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-URL",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある生徒がブラウザに「https://www.school.jp/news/index.html」と入力して学校のホームページを開いた。このURLについて正しい説明はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "「https」は通信方法、「www.school.jp」はドメイン名を表している"
+        },
+        {
+          "id": "B",
+          "text": "「https」はIPアドレスを表している"
+        },
+        {
+          "id": "C",
+          "text": "「index.html」はドメイン名を表している"
+        },
+        {
+          "id": "D",
+          "text": "URLには通信方法は含まれない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "URLには通信方法（https）、ドメイン名、パスなどの情報が含まれます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "NET-DNS",
+        "NET-IP",
+        "NET-HTTP",
+        "NET-HTTPS"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-DECISION-Q01",
+      "unit": "DATA",
+      "knowledgeId": "DATA-DECISION",
+      "level": "basic",
+      "questionType": "single",
+      "question": "データに基づいて意思決定を行う目的として、最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "客観的な根拠を基に判断するため"
+        },
+        {
+          "id": "B",
+          "text": "必ず正しい結論を得るため"
+        },
+        {
+          "id": "C",
+          "text": "自分の経験だけで判断するため"
+        },
+        {
+          "id": "D",
+          "text": "結果を予想せずに決めるため"
+        }
+      ],
+      "answer": "A",
+      "explanation": "データは客観的な根拠として利用されますが、必ず正しい結論が得られるとは限りません。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-STAT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-DECISION-Q02",
+      "unit": "DATA",
+      "knowledgeId": "DATA-DECISION",
+      "level": "basic",
+      "questionType": "single",
+      "question": "アンケート結果を利用して商品を改善する際、最も望ましい考え方はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "複数の回答を分析して判断する"
+        },
+        {
+          "id": "B",
+          "text": "最初の1人の回答だけで決める"
+        },
+        {
+          "id": "C",
+          "text": "回答を見ずに決める"
+        },
+        {
+          "id": "D",
+          "text": "自分の好みだけで決める"
+        }
+      ],
+      "answer": "A",
+      "explanation": "複数のデータを分析して判断することで、偏りの少ない意思決定につながります。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DATA-GRAPH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-DECISION-Q03",
+      "unit": "DATA",
+      "knowledgeId": "DATA-DECISION",
+      "level": "application",
+      "questionType": "single",
+      "question": "文化祭で2種類のパンフレット案についてアンケートを実施したところ、A案は120票、B案は80票だった。このアンケート結果を重視する場合、最も適切な判断はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "A案を採用する"
+        },
+        {
+          "id": "B",
+          "text": "B案を採用する"
+        },
+        {
+          "id": "C",
+          "text": "票数を無視して決める"
+        },
+        {
+          "id": "D",
+          "text": "どちらも同じ票数なので決められない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "アンケート結果を判断材料とするなら、より多く支持されたA案を採用するのが適切です。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DATA-GRAPH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-DECISION-Q04",
+      "unit": "DATA",
+      "knowledgeId": "DATA-DECISION",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のうち、データに基づく意思決定として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "複数年の売上データを比較して商品の仕入れ数を決める。"
+        },
+        {
+          "id": "B",
+          "text": "根拠となるデータを確認せず勘だけで仕入れ数を決める。"
+        },
+        {
+          "id": "C",
+          "text": "最初に聞いた1人の意見だけで仕入れ数を決める。"
+        },
+        {
+          "id": "D",
+          "text": "昨年のデータを見ず毎年同じ数量を仕入れる。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "複数のデータを比較・分析して判断することが、データに基づく意思決定の基本です。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DATA-STAT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-DECISION-Q05",
+      "unit": "DATA",
+      "knowledgeId": "DATA-DECISION",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある図書委員会では、新しく購入する本を選ぶために、生徒300人へアンケートを実施した。その結果、小説は150票、実用書は90票、漫画は60票であった。ただし、予算の範囲内では最も多く票を集めたジャンルだけを購入できる。この条件で最も適切な判断はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "小説を購入する"
+        },
+        {
+          "id": "B",
+          "text": "実用書を購入する"
+        },
+        {
+          "id": "C",
+          "text": "漫画を購入する"
+        },
+        {
+          "id": "D",
+          "text": "票数では判断できない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "問題文で『最も多く票を集めたジャンルだけを購入できる』という条件が示されており、小説が最も多く支持されています。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DATA-GRAPH",
+        "DATA-STAT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-GRAPH-Q01",
+      "unit": "DATA",
+      "knowledgeId": "DATA-GRAPH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "数値データを整理して一覧できるようにしたものとして最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "表"
+        },
+        {
+          "id": "B",
+          "text": "プログラム"
+        },
+        {
+          "id": "C",
+          "text": "URL"
+        },
+        {
+          "id": "D",
+          "text": "IPアドレス"
+        }
+      ],
+      "answer": "A",
+      "explanation": "表は数値や項目を整理し、比較しやすくするために用いられます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-HIST"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-GRAPH-Q02",
+      "unit": "DATA",
+      "knowledgeId": "DATA-GRAPH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "複数の項目の数量を比較するのに最も適したグラフはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "棒グラフ"
+        },
+        {
+          "id": "B",
+          "text": "折れ線グラフ"
+        },
+        {
+          "id": "C",
+          "text": "散布図"
+        },
+        {
+          "id": "D",
+          "text": "レーダーチャート"
+        }
+      ],
+      "answer": "A",
+      "explanation": "棒グラフは項目ごとの数量を比較するのに適しています。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DATA-SCATTER"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-GRAPH-Q03",
+      "unit": "DATA",
+      "knowledgeId": "DATA-GRAPH",
+      "level": "application",
+      "questionType": "single",
+      "question": "ある学校では1年間の各月の平均気温の変化を調べたい。この変化を最も分かりやすく表せるグラフはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "折れ線グラフ"
+        },
+        {
+          "id": "B",
+          "text": "円グラフ"
+        },
+        {
+          "id": "C",
+          "text": "帯グラフ"
+        },
+        {
+          "id": "D",
+          "text": "散布図"
+        }
+      ],
+      "answer": "A",
+      "explanation": "時間の経過による変化を表すには折れ線グラフが適しています。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DATA-HIST"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-GRAPH-Q04",
+      "unit": "DATA",
+      "knowledgeId": "DATA-GRAPH",
+      "level": "application",
+      "questionType": "single",
+      "question": "あるクラスの部活動所属人数の割合を表したい。全体に対する各部活動の構成比を最も分かりやすく表せるグラフはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "円グラフ"
+        },
+        {
+          "id": "B",
+          "text": "折れ線グラフ"
+        },
+        {
+          "id": "C",
+          "text": "散布図"
+        },
+        {
+          "id": "D",
+          "text": "ヒストグラム"
+        }
+      ],
+      "answer": "A",
+      "explanation": "全体に占める割合を表すには円グラフが適しています。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DATA-HIST"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-GRAPH-Q05",
+      "unit": "DATA",
+      "knowledgeId": "DATA-GRAPH",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "文化祭の来場者数を時間帯ごとに記録したデータについて、『時間の経過による来場者数の増減』を最も読み取りやすく表したい。この目的に最も適したグラフはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "折れ線グラフ"
+        },
+        {
+          "id": "B",
+          "text": "円グラフ"
+        },
+        {
+          "id": "C",
+          "text": "帯グラフ"
+        },
+        {
+          "id": "D",
+          "text": "散布図"
+        }
+      ],
+      "answer": "A",
+      "explanation": "時間とともに変化するデータは折れ線グラフで表すと増減の様子を読み取りやすくなります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DATA-HIST",
+        "DATA-SCATTER"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-HIST-Q01",
+      "unit": "DATA",
+      "knowledgeId": "DATA-HIST",
+      "level": "basic",
+      "questionType": "single",
+      "question": "ヒストグラムの主な目的として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "数値データの分布の様子を表す"
+        },
+        {
+          "id": "B",
+          "text": "時間の変化を表す"
+        },
+        {
+          "id": "C",
+          "text": "割合を表す"
+        },
+        {
+          "id": "D",
+          "text": "項目ごとの順位を表す"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ヒストグラムは、数値データがどの範囲にどれくらい分布しているかを表すグラフです。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-GRAPH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-HIST-Q02",
+      "unit": "DATA",
+      "knowledgeId": "DATA-HIST",
+      "level": "basic",
+      "questionType": "single",
+      "question": "ヒストグラムの横軸が表すものとして最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "データの値の範囲（階級）"
+        },
+        {
+          "id": "B",
+          "text": "人数だけ"
+        },
+        {
+          "id": "C",
+          "text": "割合だけ"
+        },
+        {
+          "id": "D",
+          "text": "時刻"
+        }
+      ],
+      "answer": "A",
+      "explanation": "横軸には階級と呼ばれる数値の範囲を示します。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DATA-GRAPH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-HIST-Q03",
+      "unit": "DATA",
+      "knowledgeId": "DATA-HIST",
+      "level": "application",
+      "questionType": "single",
+      "question": "100人分のテストの点数について、点数がどの範囲に多く集まっているかを調べたい。この目的に最も適したグラフはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ヒストグラム"
+        },
+        {
+          "id": "B",
+          "text": "円グラフ"
+        },
+        {
+          "id": "C",
+          "text": "帯グラフ"
+        },
+        {
+          "id": "D",
+          "text": "折れ線グラフ"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ヒストグラムは点数などの数値データの分布を確認するのに適しています。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DATA-GRAPH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-HIST-Q04",
+      "unit": "DATA",
+      "knowledgeId": "DATA-HIST",
+      "level": "application",
+      "questionType": "single",
+      "question": "ヒストグラムと棒グラフを比較した説明として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ヒストグラムは数値データの分布を表し、棒グラフは項目ごとの数量を比較する。"
+        },
+        {
+          "id": "B",
+          "text": "ヒストグラムは割合だけを表し、棒グラフは時間の変化を表す。"
+        },
+        {
+          "id": "C",
+          "text": "ヒストグラムは文字コードを表す。"
+        },
+        {
+          "id": "D",
+          "text": "ヒストグラムと棒グラフは常に同じ用途である。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ヒストグラムは分布、棒グラフは項目間の比較という異なる目的で用いられます。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DATA-GRAPH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-HIST-Q05",
+      "unit": "DATA",
+      "knowledgeId": "DATA-HIST",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある学校では1年生200人の身長を測定し、身長を5cmごとの階級に分けたヒストグラムを作成した。『最も人数が多い身長の範囲』を読み取りたい場合、最初に注目すべきものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "最も高い柱"
+        },
+        {
+          "id": "B",
+          "text": "横軸の単位だけ"
+        },
+        {
+          "id": "C",
+          "text": "平均値だけ"
+        },
+        {
+          "id": "D",
+          "text": "中央値だけ"
+        }
+      ],
+      "answer": "A",
+      "explanation": "最も高い柱は、その階級に含まれる人数が最も多いことを表しています。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DATA-GRAPH",
+        "DATA-STAT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-SCATTER-Q01",
+      "unit": "DATA",
+      "knowledgeId": "DATA-SCATTER",
+      "level": "basic",
+      "questionType": "single",
+      "question": "2つの数量の関係を表すのに最も適したグラフはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "散布図"
+        },
+        {
+          "id": "B",
+          "text": "円グラフ"
+        },
+        {
+          "id": "C",
+          "text": "帯グラフ"
+        },
+        {
+          "id": "D",
+          "text": "ヒストグラム"
+        }
+      ],
+      "answer": "A",
+      "explanation": "散布図は2つの数量の関係や傾向を表すために用いられます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-GRAPH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-SCATTER-Q02",
+      "unit": "DATA",
+      "knowledgeId": "DATA-SCATTER",
+      "level": "basic",
+      "questionType": "single",
+      "question": "あるデータについて、一方の値が大きくなるほど、もう一方の値も大きくなる傾向が見られた。この関係を何というか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "正の相関"
+        },
+        {
+          "id": "B",
+          "text": "負の相関"
+        },
+        {
+          "id": "C",
+          "text": "無相関"
+        },
+        {
+          "id": "D",
+          "text": "比例"
+        }
+      ],
+      "answer": "A",
+      "explanation": "一方が増えるともう一方も増える傾向を正の相関といいます。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DATA-DECISION"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-SCATTER-Q03",
+      "unit": "DATA",
+      "knowledgeId": "DATA-SCATTER",
+      "level": "application",
+      "questionType": "single",
+      "question": "ある生徒が30日間について、1日の勉強時間とその日のスマートフォン利用時間を記録した。この2つの数量の関係を調べたい場合、最も適したグラフはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "散布図"
+        },
+        {
+          "id": "B",
+          "text": "円グラフ"
+        },
+        {
+          "id": "C",
+          "text": "折れ線グラフ"
+        },
+        {
+          "id": "D",
+          "text": "帯グラフ"
+        }
+      ],
+      "answer": "A",
+      "explanation": "2つの数量の関係を調べるには散布図が適しています。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DATA-GRAPH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-SCATTER-Q04",
+      "unit": "DATA",
+      "knowledgeId": "DATA-SCATTER",
+      "level": "application",
+      "questionType": "single",
+      "question": "アイスクリームの売上と気温には正の相関が見られた。このことから必ず言えることとして最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "気温が高い日に売上が多くなる傾向が見られる。"
+        },
+        {
+          "id": "B",
+          "text": "気温が上がることだけが売上を決めている。"
+        },
+        {
+          "id": "C",
+          "text": "気温が売上の唯一の原因である。"
+        },
+        {
+          "id": "D",
+          "text": "相関があるので必ず因果関係がある。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "相関はデータの傾向を示すものであり、因果関係を示すものではありません。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DATA-DECISION"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-SCATTER-Q05",
+      "unit": "DATA",
+      "knowledgeId": "DATA-SCATTER",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある学校で、50人の生徒について『家庭学習時間』と『数学の得点』を散布図に表したところ、点がおおむね右上がりに分布していた。この散布図から読み取れる内容として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "家庭学習時間が長い生徒ほど、数学の得点が高い傾向が見られる。"
+        },
+        {
+          "id": "B",
+          "text": "家庭学習時間を1時間増やすと、全員の数学の得点が必ず同じだけ上がる。"
+        },
+        {
+          "id": "C",
+          "text": "家庭学習時間だけで数学の得点が決まる。"
+        },
+        {
+          "id": "D",
+          "text": "家庭学習時間と数学の得点には因果関係が証明された。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "右上がりの散布図は正の相関を示します。相関から因果関係を断定することはできません。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DATA-STAT",
+        "DATA-DECISION"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-STAT-Q01",
+      "unit": "DATA",
+      "knowledgeId": "DATA-STAT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "データの合計を個数で割って求める代表値はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "平均値"
+        },
+        {
+          "id": "B",
+          "text": "中央値"
+        },
+        {
+          "id": "C",
+          "text": "最頻値"
+        },
+        {
+          "id": "D",
+          "text": "最大値"
+        }
+      ],
+      "answer": "A",
+      "explanation": "平均値は、データの合計を個数で割って求める代表値です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-HIST"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-STAT-Q02",
+      "unit": "DATA",
+      "knowledgeId": "DATA-STAT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "データを小さい順に並べたとき、中央に位置する値を何というか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "平均値"
+        },
+        {
+          "id": "B",
+          "text": "中央値"
+        },
+        {
+          "id": "C",
+          "text": "最頻値"
+        },
+        {
+          "id": "D",
+          "text": "範囲"
+        }
+      ],
+      "answer": "B",
+      "explanation": "中央値は、データを順番に並べたとき中央に位置する値です。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "DATA-HIST"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-STAT-Q03",
+      "unit": "DATA",
+      "knowledgeId": "DATA-STAT",
+      "level": "application",
+      "questionType": "single",
+      "question": "5人のテストの点数が40点、42点、43点、44点、100点であった。このとき、極端に高い100点の影響を受けにくい代表値として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "平均値"
+        },
+        {
+          "id": "B",
+          "text": "中央値"
+        },
+        {
+          "id": "C",
+          "text": "最頻値"
+        },
+        {
+          "id": "D",
+          "text": "合計"
+        }
+      ],
+      "answer": "B",
+      "explanation": "中央値は極端に大きい値や小さい値（外れ値）の影響を受けにくい代表値です。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DATA-DECISION"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-STAT-Q04",
+      "unit": "DATA",
+      "knowledgeId": "DATA-STAT",
+      "level": "application",
+      "questionType": "single",
+      "question": "データが「2、3、3、4、5、5、5、8」である。このデータの最頻値として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "C",
+      "explanation": "最も多く現れる値が最頻値です。このデータでは5が3回現れています。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "DATA-HIST"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-STAT-Q05",
+      "unit": "DATA",
+      "knowledgeId": "DATA-STAT",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "あるクラスの5人の通学時間は10分、12分、13分、15分、60分であった。『普段の通学時間の代表的な値』として最も適切な代表値を選ぶとき、最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "平均値"
+        },
+        {
+          "id": "B",
+          "text": "中央値"
+        },
+        {
+          "id": "C",
+          "text": "最大値"
+        },
+        {
+          "id": "D",
+          "text": "最小値"
+        }
+      ],
+      "answer": "B",
+      "explanation": "60分は他の値と比べて極端に大きく、平均値はその影響を受けます。代表的な値としては中央値が適しています。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DATA-DECISION",
+        "DATA-HIST"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-AUTH-Q01",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-AUTH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "認証の目的として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "利用者が本人であることを確認する"
+        },
+        {
+          "id": "B",
+          "text": "通信速度を向上させる"
+        },
+        {
+          "id": "C",
+          "text": "データ容量を削減する"
+        },
+        {
+          "id": "D",
+          "text": "画像を圧縮する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "認証は、サービスを利用しようとしている人が本人であることを確認するための仕組みです。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "SEC-CIA"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-AUTH-Q02",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-AUTH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "IDとパスワードによる認証に加えて、スマートフォンに送信された確認コードを入力して本人確認を行う方式を何というか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "多要素認証"
+        },
+        {
+          "id": "B",
+          "text": "暗号化"
+        },
+        {
+          "id": "C",
+          "text": "バックアップ"
+        },
+        {
+          "id": "D",
+          "text": "圧縮"
+        }
+      ],
+      "answer": "A",
+      "explanation": "異なる種類の認証要素を組み合わせる認証方式を多要素認証といいます。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "SEC-CRYPT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-AUTH-Q03",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-AUTH",
+      "level": "application",
+      "questionType": "single",
+      "question": "学校で利用している学習システムのアカウントを安全に利用したい。次のうち、最も適切な行動はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "パスワードを他人に教えず、多要素認証が利用できる場合は設定する"
+        },
+        {
+          "id": "B",
+          "text": "友人と同じパスワードを使う"
+        },
+        {
+          "id": "C",
+          "text": "覚えやすいようにパスワードを教室の机に貼る"
+        },
+        {
+          "id": "D",
+          "text": "複数人で同じアカウントを共有する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "パスワードを適切に管理し、多要素認証を利用すると安全性が高まります。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "SEC-PHISH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-AUTH-Q04",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-AUTH",
+      "level": "application",
+      "questionType": "single",
+      "question": "次の認証方法のうち、「知識情報」と「所持情報」の2種類の認証要素を組み合わせているものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "パスワードを入力し、スマートフォンに届いた確認コードも入力する"
+        },
+        {
+          "id": "B",
+          "text": "パスワードを2回入力する"
+        },
+        {
+          "id": "C",
+          "text": "秘密の質問に2問答える"
+        },
+        {
+          "id": "D",
+          "text": "異なる2つのパスワードを入力する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "パスワードは知識情報、スマートフォンに届く確認コードは所持情報による認証です。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "SEC-CRYPT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-AUTH-Q05",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-AUTH",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある学校では、学習システムへのログイン時に『ID・パスワードの入力』と『登録済みスマートフォンに表示された認証コードの入力』の両方を求めることにした。この変更によって期待できる効果として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "パスワードが漏えいした場合でも、不正ログインされる危険性を低減できる"
+        },
+        {
+          "id": "B",
+          "text": "パスワードを設定しなくても利用できる"
+        },
+        {
+          "id": "C",
+          "text": "通信速度が速くなる"
+        },
+        {
+          "id": "D",
+          "text": "データ容量が小さくなる"
+        }
+      ],
+      "answer": "A",
+      "explanation": "知識情報と所持情報を組み合わせることで、不正ログインの危険性を低減できます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "SEC-PHISH",
+        "SEC-CIA"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CIA-Q01",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CIA",
+      "level": "basic",
+      "questionType": "single",
+      "question": "情報セキュリティの三要素に含まれるものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "機密性・完全性・可用性"
+        },
+        {
+          "id": "B",
+          "text": "速度・容量・価格"
+        },
+        {
+          "id": "C",
+          "text": "入力・処理・出力"
+        },
+        {
+          "id": "D",
+          "text": "保存・削除・圧縮"
+        }
+      ],
+      "answer": "A",
+      "explanation": "情報セキュリティの三要素は、機密性・完全性・可用性です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "SEC-AUTH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CIA-Q02",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CIA",
+      "level": "basic",
+      "questionType": "single",
+      "question": "『許可された人だけが情報を利用できる状態を保つこと』を表す情報セキュリティの三要素はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "機密性"
+        },
+        {
+          "id": "B",
+          "text": "完全性"
+        },
+        {
+          "id": "C",
+          "text": "可用性"
+        },
+        {
+          "id": "D",
+          "text": "匿名性"
+        }
+      ],
+      "answer": "A",
+      "explanation": "機密性は、許可された利用者だけが情報へアクセスできる状態を保つことです。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "SEC-AUTH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CIA-Q03",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CIA",
+      "level": "application",
+      "questionType": "single",
+      "question": "学校の成績データを保存しているサーバが故障したが、事前に作成していたバックアップから復旧し、授業開始までに利用できる状態に戻した。この対応によって最も維持された情報セキュリティの要素はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "可用性"
+        },
+        {
+          "id": "B",
+          "text": "機密性"
+        },
+        {
+          "id": "C",
+          "text": "匿名性"
+        },
+        {
+          "id": "D",
+          "text": "暗号化"
+        }
+      ],
+      "answer": "A",
+      "explanation": "可用性は、必要なときに情報やシステムを利用できる状態を維持することです。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "SEC-MALWARE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CIA-Q04",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CIA",
+      "level": "application",
+      "questionType": "single",
+      "question": "テストの成績データが、誤って書き換えられてしまった。このとき損なわれた情報セキュリティの要素として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "完全性"
+        },
+        {
+          "id": "B",
+          "text": "機密性"
+        },
+        {
+          "id": "C",
+          "text": "可用性"
+        },
+        {
+          "id": "D",
+          "text": "利便性"
+        }
+      ],
+      "answer": "A",
+      "explanation": "完全性は、情報が正確で改ざんされていない状態を保つことです。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "SEC-CRYPT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CIA-Q05",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CIA",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある学校では、①生徒ごとにID・パスワードでログインする、②成績データの改ざんを防ぐため更新権限を教員だけに設定する、③サーバ障害に備えて毎日バックアップを取得する、という対策を実施している。このうち、可用性を高める対策はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "③ サーバ障害に備えて毎日バックアップを取得する"
+        },
+        {
+          "id": "B",
+          "text": "① 生徒ごとにID・パスワードでログインする"
+        },
+        {
+          "id": "C",
+          "text": "② 更新権限を教員だけに設定する"
+        },
+        {
+          "id": "D",
+          "text": "①と②のみ"
+        }
+      ],
+      "answer": "A",
+      "explanation": "バックアップは障害発生時にも情報やシステムを利用できるようにする対策であり、可用性の向上につながります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "SEC-AUTH",
+        "SEC-MALWARE",
+        "SEC-CRYPT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CRYPT-Q01",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CRYPT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "暗号化を行う主な目的として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "第三者に内容を読まれないようにする"
+        },
+        {
+          "id": "B",
+          "text": "データの容量を小さくする"
+        },
+        {
+          "id": "C",
+          "text": "通信速度を速くする"
+        },
+        {
+          "id": "D",
+          "text": "ファイル名を変更する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "暗号化は、データの内容を第三者に読み取られないよう保護する技術です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "SEC-CIA"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CRYPT-Q02",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CRYPT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "暗号化と復号に同じ鍵を使用する方式はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "共通鍵暗号"
+        },
+        {
+          "id": "B",
+          "text": "公開鍵暗号"
+        },
+        {
+          "id": "C",
+          "text": "多要素認証"
+        },
+        {
+          "id": "D",
+          "text": "電子署名"
+        }
+      ],
+      "answer": "A",
+      "explanation": "共通鍵暗号では、暗号化と復号に同じ鍵を使用します。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "SEC-AUTH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CRYPT-Q03",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CRYPT",
+      "level": "application",
+      "questionType": "single",
+      "question": "インターネットで商品の注文をするとき、通信内容を第三者に読み取られにくくするために暗号化通信が利用されている。暗号化通信を利用する主な目的として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "通信内容を保護する"
+        },
+        {
+          "id": "B",
+          "text": "画像の解像度を上げる"
+        },
+        {
+          "id": "C",
+          "text": "通信料金を無料にする"
+        },
+        {
+          "id": "D",
+          "text": "ファイルサイズを必ず小さくする"
+        }
+      ],
+      "answer": "A",
+      "explanation": "暗号化通信は、通信内容を第三者から保護することを目的としています。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "SEC-CIA"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CRYPT-Q04",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CRYPT",
+      "level": "application",
+      "questionType": "single",
+      "question": "公開鍵暗号方式について説明したものとして最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "暗号化と復号で異なる鍵を使用する"
+        },
+        {
+          "id": "B",
+          "text": "暗号化と復号で必ず同じ鍵を使用する"
+        },
+        {
+          "id": "C",
+          "text": "鍵を使わずに暗号化する"
+        },
+        {
+          "id": "D",
+          "text": "暗号化できるのは文字データだけである"
+        }
+      ],
+      "answer": "A",
+      "explanation": "公開鍵暗号では、暗号化と復号に異なる鍵を使用します。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "SEC-AUTH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CRYPT-Q05",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CRYPT",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "あるWebサービスでは、利用者がサービス事業者へ初めて個人情報を送信する際、事業者が公開している公開鍵を用いて通信内容を暗号化した。この方法を採用する主な理由として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "事前に共通鍵を安全に受け渡していなくても、暗号化通信を開始できる"
+        },
+        {
+          "id": "B",
+          "text": "公開鍵だけで復号できる"
+        },
+        {
+          "id": "C",
+          "text": "暗号化すると通信速度が必ず速くなる"
+        },
+        {
+          "id": "D",
+          "text": "暗号化すると認証が不要になる"
+        }
+      ],
+      "answer": "A",
+      "explanation": "公開鍵暗号は、事前に共通鍵を安全に共有していない相手とも、安全に暗号化通信を開始できるという特徴があります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "SEC-AUTH",
+        "SEC-CIA"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-MALWARE-Q01",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-MALWARE",
+      "level": "basic",
+      "questionType": "single",
+      "question": "マルウェアとして最も適切な説明はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "利用者やコンピュータに被害を与えることを目的として作られた悪意のあるソフトウェア"
+        },
+        {
+          "id": "B",
+          "text": "画像編集を行うソフトウェア"
+        },
+        {
+          "id": "C",
+          "text": "文書を作成するソフトウェア"
+        },
+        {
+          "id": "D",
+          "text": "表計算ソフトウェア"
+        }
+      ],
+      "answer": "A",
+      "explanation": "マルウェアは、悪意をもって作成されたソフトウェアの総称です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "SEC-PHISH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-MALWARE-Q02",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-MALWARE",
+      "level": "basic",
+      "questionType": "single",
+      "question": "ファイルを暗号化し、元に戻すことと引き換えに金銭を要求するマルウェアはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ランサムウェア"
+        },
+        {
+          "id": "B",
+          "text": "ファイアウォール"
+        },
+        {
+          "id": "C",
+          "text": "ブラウザ"
+        },
+        {
+          "id": "D",
+          "text": "バックアップソフト"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ランサムウェアは、ファイルを暗号化して身代金を要求するマルウェアです。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "SEC-CRYPT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-MALWARE-Q03",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-MALWARE",
+      "level": "application",
+      "questionType": "single",
+      "question": "メールに添付された、送信元に心当たりのない実行ファイルを受信した。マルウェア感染を防ぐための行動として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ファイルを開かずに削除し、必要に応じて送信元へ確認する"
+        },
+        {
+          "id": "B",
+          "text": "内容を確認するため、すぐに実行する"
+        },
+        {
+          "id": "C",
+          "text": "友人にも転送して意見を聞く"
+        },
+        {
+          "id": "D",
+          "text": "実行した後にウイルス対策ソフトをインストールする"
+        }
+      ],
+      "answer": "A",
+      "explanation": "送信元が不明な実行ファイルは開かないことが、感染防止につながります。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "SEC-PHISH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-MALWARE-Q04",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-MALWARE",
+      "level": "application",
+      "questionType": "single",
+      "question": "ワームの特徴として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "自らネットワークを通じて感染を広げることがある"
+        },
+        {
+          "id": "B",
+          "text": "必ず利用者がファイルを実行しなければ感染しない"
+        },
+        {
+          "id": "C",
+          "text": "感染すると必ず身代金を要求する"
+        },
+        {
+          "id": "D",
+          "text": "コンピュータの性能を向上させる"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ワームは、自身でネットワークを通じて拡散する特徴があります。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "SEC-PHISH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-MALWARE-Q05",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-MALWARE",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "学校のパソコンで、昨日まで開けていた文書ファイルが突然すべて開けなくなり、『元に戻したければ指定された金額を支払ってください』という画面が表示された。この状況として最も考えられるものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ランサムウェアに感染した"
+        },
+        {
+          "id": "B",
+          "text": "OSの表示言語が変更された"
+        },
+        {
+          "id": "C",
+          "text": "Webブラウザのホームページが変更された"
+        },
+        {
+          "id": "D",
+          "text": "ディスプレイの解像度が変更された"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ファイルを暗号化し、復旧と引き換えに金銭を要求するのはランサムウェアの典型的な特徴です。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "SEC-CRYPT",
+        "SEC-CIA"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-PHISH-Q01",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-PHISH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "フィッシングの目的として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "IDやパスワードなどの情報をだまし取る"
+        },
+        {
+          "id": "B",
+          "text": "通信速度を向上させる"
+        },
+        {
+          "id": "C",
+          "text": "画像ファイルを圧縮する"
+        },
+        {
+          "id": "D",
+          "text": "ハードディスクの容量を増やす"
+        }
+      ],
+      "answer": "A",
+      "explanation": "フィッシングは、正規のサービスを装って認証情報などを盗み取る手口です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "SEC-AUTH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-PHISH-Q02",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-PHISH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "権限のない人が他人のアカウントを利用してシステムへ侵入する行為を何というか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "不正アクセス"
+        },
+        {
+          "id": "B",
+          "text": "バックアップ"
+        },
+        {
+          "id": "C",
+          "text": "デフラグ"
+        },
+        {
+          "id": "D",
+          "text": "データ圧縮"
+        }
+      ],
+      "answer": "A",
+      "explanation": "権限のない人がシステムへ侵入する行為は不正アクセスです。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "SEC-AUTH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-PHISH-Q03",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-PHISH",
+      "level": "application",
+      "questionType": "single",
+      "question": "利用している銀行から『24時間以内にログインしないと口座が利用停止になります』というメールが届き、メール内のリンクからIDとパスワードの入力を求められた。このとき最も適切な行動はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "メールのリンクは開かず、公式Webサイトや公式アプリから通知内容を確認する"
+        },
+        {
+          "id": "B",
+          "text": "急いでメールのリンクを開き、IDとパスワードを入力する"
+        },
+        {
+          "id": "C",
+          "text": "友人へメールを転送して入力してもらう"
+        },
+        {
+          "id": "D",
+          "text": "メールを受信した端末を再起動してからリンクを開く"
+        }
+      ],
+      "answer": "A",
+      "explanation": "フィッシングメールの可能性があるため、メール内のリンクではなく公式の手段から確認します。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "SEC-AUTH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-PHISH-Q04",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-PHISH",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のうち、フィッシング被害を防ぐ対策として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "メールやSMSに記載されたリンクではなく、公式Webサイトや公式アプリからログインする"
+        },
+        {
+          "id": "B",
+          "text": "どのWebサイトでも同じパスワードを使う"
+        },
+        {
+          "id": "C",
+          "text": "パスワードを紙に書いてモニターへ貼る"
+        },
+        {
+          "id": "D",
+          "text": "不審なメールでも内容確認のため必ずリンクを開く"
+        }
+      ],
+      "answer": "A",
+      "explanation": "送信されたリンクではなく、自分で公式サイトへアクセスすることがフィッシング対策として有効です。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "SEC-AUTH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-PHISH-Q05",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-PHISH",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "ある生徒は、宅配会社を名乗るSMSを受信し、『荷物を届けられなかったため、再配達の手続きをしてください』というメッセージとURLが記載されていた。しかし、その生徒は荷物を注文した覚えがなかった。この状況で最も適切な対応はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "URLは開かず、必要であれば宅配会社の公式Webサイトや公式アプリで配送状況を確認する"
+        },
+        {
+          "id": "B",
+          "text": "URLを開き、表示された内容を確認してから判断する"
+        },
+        {
+          "id": "C",
+          "text": "SMSに返信して個人情報を送信する"
+        },
+        {
+          "id": "D",
+          "text": "URLを友人へ転送して安全かどうか確認してもらう"
+        }
+      ],
+      "answer": "A",
+      "explanation": "荷物を注文した覚えがない場合はフィッシングの可能性があります。SMS内のURLではなく、公式の方法で確認することが重要です。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "SEC-AUTH",
+        "SEC-MALWARE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-BRANCH-Q01",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-BRANCH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "条件によって実行する処理を切り替えるために使用するPythonの命令はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "if"
+        },
+        {
+          "id": "B",
+          "text": "for"
+        },
+        {
+          "id": "C",
+          "text": "print"
+        },
+        {
+          "id": "D",
+          "text": "input"
+        }
+      ],
+      "answer": "A",
+      "explanation": "if文は、条件に応じて実行する処理を切り替える命令です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-BRANCH-Q02",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-BRANCH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "次のプログラムを実行する。変数 x の値が8のとき、画面に表示されるものはどれか。\n\nx = 8\nif x > 5:\n    print(\"OK\")",
+      "choices": [
+        {
+          "id": "A",
+          "text": "OK"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "何も表示されない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "8 > 5 は真であるため、「OK」が表示されます。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-BRANCH-Q03",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-BRANCH",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムは、テストの点数が60点以上なら「合格」、60点未満なら「再挑戦」と表示する。入力値が75のとき、表示されるものはどれか。\n\nscore = int(input())\nif score >= 60:\n    print(\"合格\")\nelse:\n    print(\"再挑戦\")",
+      "choices": [
+        {
+          "id": "A",
+          "text": "合格"
+        },
+        {
+          "id": "B",
+          "text": "再挑戦"
+        },
+        {
+          "id": "C",
+          "text": "75"
+        },
+        {
+          "id": "D",
+          "text": "何も表示されない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "75は60以上なので、「合格」が表示されます。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "PROG-VARIABLE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-BRANCH-Q04",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-BRANCH",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムを実行する。入力値が10のとき、表示されるものはどれか。\n\nx = int(input())\nif x == 10:\n    print(\"A\")\nelse:\n    print(\"B\")",
+      "choices": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "AB"
+        }
+      ],
+      "answer": "A",
+      "explanation": "条件式 x == 10 が真なので、「A」が表示されます。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-BRANCH-Q05",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-BRANCH",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "次のプログラムを実行する。入力値が4のとき、表示されるものはどれか。\n\nx = int(input())\nif x >= 5:\n    print(\"大\")\nelse:\n    print(\"小\")\nprint(\"終了\")",
+      "choices": [
+        {
+          "id": "A",
+          "text": "小\n終了"
+        },
+        {
+          "id": "B",
+          "text": "大\n終了"
+        },
+        {
+          "id": "C",
+          "text": "小"
+        },
+        {
+          "id": "D",
+          "text": "終了"
+        }
+      ],
+      "answer": "A",
+      "explanation": "4は5以上ではないため「小」が表示され、その後に「終了」が表示されます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE",
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-LOOP-Q01",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-LOOP",
+      "level": "basic",
+      "questionType": "single",
+      "question": "同じ処理を決められた回数だけ繰り返し実行するときに用いるPythonの命令はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "for"
+        },
+        {
+          "id": "B",
+          "text": "if"
+        },
+        {
+          "id": "C",
+          "text": "print"
+        },
+        {
+          "id": "D",
+          "text": "input"
+        }
+      ],
+      "answer": "A",
+      "explanation": "for文は、指定した回数だけ処理を繰り返すために用います。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-LOOP-Q02",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-LOOP",
+      "level": "basic",
+      "questionType": "single",
+      "question": "次のプログラムを実行したとき、「こんにちは」は何回表示されるか。\n\nfor i in range(3):\n    print(\"こんにちは\")",
+      "choices": [
+        {
+          "id": "A",
+          "text": "3回"
+        },
+        {
+          "id": "B",
+          "text": "2回"
+        },
+        {
+          "id": "C",
+          "text": "4回"
+        },
+        {
+          "id": "D",
+          "text": "1回"
+        }
+      ],
+      "answer": "A",
+      "explanation": "range(3)では処理が3回繰り返されます。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-LOOP-Q03",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-LOOP",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムは、100円のお菓子を5個買ったときの合計金額を計算する。\n\nsum = 0\nfor i in range(5):\n    sum = sum + 100\nprint(sum)\n\n表示される値はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "500"
+        },
+        {
+          "id": "B",
+          "text": "100"
+        },
+        {
+          "id": "C",
+          "text": "105"
+        },
+        {
+          "id": "D",
+          "text": "400"
+        }
+      ],
+      "answer": "A",
+      "explanation": "100を5回加えるので、合計は500になります。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-LOOP-Q04",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-LOOP",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムを実行したとき、表示される値はどれか。\n\nx = 2\nfor i in range(3):\n    x = x + 2\nprint(x)",
+      "choices": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "A",
+      "explanation": "xは2から始まり、2を3回加えるので8になります。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-LOOP-Q05",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-LOOP",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "次のプログラムを実行する。\n\nx = 1\nfor i in range(4):\n    x = x * 2\nprint(x)\n\n表示される値として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "16"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "32"
+        }
+      ],
+      "answer": "A",
+      "explanation": "xは1から始まり、2倍する処理を4回繰り返すため、1→2→4→8→16となります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE",
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-SEQUENCE-Q01",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-SEQUENCE",
+      "level": "basic",
+      "questionType": "single",
+      "question": "順次処理について説明したものとして最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "命令を上から下へ順番に実行する"
+        },
+        {
+          "id": "B",
+          "text": "条件によって命令を選んで実行する"
+        },
+        {
+          "id": "C",
+          "text": "同じ命令を何度も繰り返す"
+        },
+        {
+          "id": "D",
+          "text": "複数の命令を同時に実行する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "順次処理では、命令を記述された順番に実行します。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-BRANCH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-SEQUENCE-Q02",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-SEQUENCE",
+      "level": "basic",
+      "questionType": "single",
+      "question": "次のプログラムを実行したとき、表示される値はどれか。\n\nx = 8\ny = 3\nprint(x + y)",
+      "choices": [
+        {
+          "id": "A",
+          "text": "11"
+        },
+        {
+          "id": "B",
+          "text": "83"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "answer": "A",
+      "explanation": "変数xとyの値を加算し、11が表示されます。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "PROG-VARIABLE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-SEQUENCE-Q03",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-SEQUENCE",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムは、1冊180円のノートを4冊購入した代金を計算して表示する。\n\nprice = 180\ncount = 4\nprint(price * count)\n\n表示される値はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "720"
+        },
+        {
+          "id": "B",
+          "text": "184"
+        },
+        {
+          "id": "C",
+          "text": "1804"
+        },
+        {
+          "id": "D",
+          "text": "176"
+        }
+      ],
+      "answer": "A",
+      "explanation": "180×4=720となります。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-SEQUENCE-Q04",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-SEQUENCE",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムを実行したとき、最後に表示される値はどれか。\n\nx = 5\nx = x + 2\nprint(x)",
+      "choices": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "52"
+        }
+      ],
+      "answer": "A",
+      "explanation": "最初にxへ5を代入し、その後x+2の結果である7を再びxへ代入します。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-SEQUENCE-Q05",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-SEQUENCE",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "次のプログラムを実行する。\n\nx = 4\ny = x + 3\nx = y * 2\nprint(x)\n\n表示される値として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "14"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "11"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "A",
+      "explanation": "順に実行すると、yは7、xは14となり、14が表示されます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "PROG-VARIABLE",
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-TRACE-Q01",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-TRACE",
+      "level": "basic",
+      "questionType": "single",
+      "question": "プログラムを1行ずつ実行したと考え、変数の値の変化を確認する作業を何というか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "トレース"
+        },
+        {
+          "id": "B",
+          "text": "コンパイル"
+        },
+        {
+          "id": "C",
+          "text": "暗号化"
+        },
+        {
+          "id": "D",
+          "text": "圧縮"
+        }
+      ],
+      "answer": "A",
+      "explanation": "トレースは、プログラムを順に追いながら変数の値や処理の流れを確認する作業です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-TRACE-Q02",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-TRACE",
+      "level": "basic",
+      "questionType": "single",
+      "question": "次のプログラムを実行したとき、最後の変数 x の値はどれか。\n\nx = 3\nx = x + 4",
+      "choices": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "34"
+        }
+      ],
+      "answer": "A",
+      "explanation": "最初にxへ3を代入し、その後3+4の結果である7がxへ代入されます。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-TRACE-Q03",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-TRACE",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムは、3本の商品（価格はすべて120円）の合計金額を計算する。表示される値はどれか。\n\nsum = 0\nfor i in range(3):\n    sum = sum + 120\nprint(sum)",
+      "choices": [
+        {
+          "id": "A",
+          "text": "360"
+        },
+        {
+          "id": "B",
+          "text": "240"
+        },
+        {
+          "id": "C",
+          "text": "123"
+        },
+        {
+          "id": "D",
+          "text": "120"
+        }
+      ],
+      "answer": "A",
+      "explanation": "120を3回加えるので、合計は360になります。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "PROG-LOOP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-TRACE-Q04",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-TRACE",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムを実行したとき、最後に表示される値はどれか。\n\nx = 2\ny = 5\nx = y\ny = x + 1\nprint(y)",
+      "choices": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "A",
+      "explanation": "xは5になり、その後yには5+1である6が代入されます。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "PROG-VARIABLE",
+        "PROG-SEQUENCE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-TRACE-Q05",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-TRACE",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "次のプログラムを実行する。\n\nx = 1\nfor i in range(3):\n    x = x + i\nprint(x)\n\nこのとき表示される値として最も適切なものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "A",
+      "explanation": "range(3)ではiは0、1、2となります。xは1→1→2→4と変化するため、最後に4が表示されます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "PROG-LOOP",
+        "PROG-SEQUENCE",
+        "PROG-VARIABLE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-VARIABLE-Q01",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-VARIABLE",
+      "level": "basic",
+      "questionType": "single",
+      "question": "プログラムで値を保存しておくために使用するものはどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "変数"
+        },
+        {
+          "id": "B",
+          "text": "コメント"
+        },
+        {
+          "id": "C",
+          "text": "演算子"
+        },
+        {
+          "id": "D",
+          "text": "インデント"
+        }
+      ],
+      "answer": "A",
+      "explanation": "変数は、数値や文字列などのデータを保存するために使用します。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-VARIABLE-Q02",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-VARIABLE",
+      "level": "basic",
+      "questionType": "single",
+      "question": "Pythonで画面に文字や計算結果を表示する命令はどれか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "print()"
+        },
+        {
+          "id": "B",
+          "text": "input()"
+        },
+        {
+          "id": "C",
+          "text": "int()"
+        },
+        {
+          "id": "D",
+          "text": "if"
+        }
+      ],
+      "answer": "A",
+      "explanation": "print()は画面へ文字列や変数の値を表示する命令です。",
+      "skill": "concept",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-VARIABLE-Q03",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-VARIABLE",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムを実行し、入力として「Sakura」と入力したとき、画面に表示されるものはどれか。\n\nname = input()\nprint(name)",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Sakura"
+        },
+        {
+          "id": "B",
+          "text": "name"
+        },
+        {
+          "id": "C",
+          "text": "input"
+        },
+        {
+          "id": "D",
+          "text": "何も表示されない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "入力された文字列が変数nameに代入され、その内容が表示されます。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-VARIABLE-Q04",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-VARIABLE",
+      "level": "application",
+      "questionType": "single",
+      "question": "次のプログラムを実行する。入力値が「5」のとき、表示される結果はどれか。\n\nx = int(input())\nprint(x + 3)",
+      "choices": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "53"
+        },
+        {
+          "id": "C",
+          "text": "35"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "A",
+      "explanation": "int()によって入力値は整数となるため、5+3=8が表示されます。",
+      "skill": "comparison",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-VARIABLE-Q05",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-VARIABLE",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "次のプログラムを実行する。入力値として「12」を入力したとき、画面に表示されるものはどれか。\n\nx = int(input())\ny = x\nprint(y)",
+      "choices": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "x"
+        },
+        {
+          "id": "C",
+          "text": "y"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "A",
+      "explanation": "入力された12がxに代入され、その値がyへ代入されて表示されます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "PROG-SEQUENCE",
+        "PROG-TRACE"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DESIGN-INFO-Q01",
+      "unit": "DESIGN",
+      "knowledgeId": "DESIGN-INFO",
+      "level": "basic",
+      "questionType": "single",
+      "question": "配色において、情報の階層を示すために使う手法は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "コントラスト"
+        },
+        {
+          "id": "B",
+          "text": "トリミング"
+        },
+        {
+          "id": "C",
+          "text": "解像度変更"
+        },
+        {
+          "id": "D",
+          "text": "拡大縮小"
+        }
+      ],
+      "answer": "A",
+      "explanation": "明暗や彩度の差（コントラスト）を使うと、重要な情報を目立たせたり階層を示したりできます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DESIGN-UNIVERSAL"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DESIGN-UNIVERSAL-Q01",
+      "unit": "DESIGN",
+      "knowledgeId": "DESIGN-UNIVERSAL",
+      "level": "basic",
+      "questionType": "single",
+      "question": "誰にでも伝わりやすい図表を作る際に重要なことは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "色だけで区別する"
+        },
+        {
+          "id": "B",
+          "text": "文字を装飾する"
+        },
+        {
+          "id": "C",
+          "text": "色と形の両方で区別する"
+        },
+        {
+          "id": "D",
+          "text": "情報を減らさない"
+        }
+      ],
+      "answer": "C",
+      "explanation": "色だけに頼ると、色の区別が難しい人に伝わらないことがあります。色と形の両方を使うと、より多くの人に伝わります。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DESIGN-INFO"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DESIGN-UNIVERSAL-Q02",
+      "unit": "DESIGN",
+      "knowledgeId": "DESIGN-UNIVERSAL",
+      "level": "basic",
+      "questionType": "single",
+      "question": "多くの人にとって使いやすいデザインを目指す考え方は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "レスポンシブデザイン"
+        },
+        {
+          "id": "B",
+          "text": "ユニバーサルデザイン"
+        },
+        {
+          "id": "C",
+          "text": "フラットデザイン"
+        },
+        {
+          "id": "D",
+          "text": "マテリアルデザイン"
+        }
+      ],
+      "answer": "B",
+      "explanation": "年齢や障がいの有無に関わらず、できるだけ多くの人が使えるように設計する考え方です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DESIGN-INFO"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DESIGN-INFO-Q02",
+      "unit": "DESIGN",
+      "knowledgeId": "DESIGN-INFO",
+      "level": "basic",
+      "questionType": "single",
+      "question": "情報を誤解なく伝えるために意識すべきことは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "装飾を増やす"
+        },
+        {
+          "id": "B",
+          "text": "情報を詰め込む"
+        },
+        {
+          "id": "C",
+          "text": "シンプルに整理する"
+        },
+        {
+          "id": "D",
+          "text": "専門用語を多用する"
+        }
+      ],
+      "answer": "C",
+      "explanation": "情報を詰め込みすぎると伝わりにくくなります。要点を絞ってシンプルに整理することが大切です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DESIGN-INFO-Q03",
+      "unit": "DESIGN",
+      "knowledgeId": "DESIGN-INFO",
+      "level": "basic",
+      "questionType": "single",
+      "question": "グラフの種類を選ぶときに大切なことは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "見た目が派手なものを選ぶ"
+        },
+        {
+          "id": "B",
+          "text": "伝えたい内容に合わせて選ぶ"
+        },
+        {
+          "id": "C",
+          "text": "色数を増やす"
+        },
+        {
+          "id": "D",
+          "text": "データを全て使う"
+        }
+      ],
+      "answer": "B",
+      "explanation": "割合を伝えたいなら円グラフ、分布を伝えたいならヒストグラムなど、目的に合わせてグラフを選びます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-HIST",
+        "DATA-SCATTER"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DESIGN-UNIVERSAL-Q03",
+      "unit": "DESIGN",
+      "knowledgeId": "DESIGN-UNIVERSAL",
+      "level": "basic",
+      "questionType": "single",
+      "question": "ピクトグラム（案内用の絵記号）の役割は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "装飾のため"
+        },
+        {
+          "id": "B",
+          "text": "言語に関係なく意味を伝える"
+        },
+        {
+          "id": "C",
+          "text": "ファイルサイズを減らす"
+        },
+        {
+          "id": "D",
+          "text": "印刷を楽にする"
+        }
+      ],
+      "answer": "B",
+      "explanation": "ピクトグラムは絵記号のような表現で、言語が異なっても意味が伝わりやすいという特徴があります。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DESIGN-INFO"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-ALGORITHM-Q01",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-ALGORITHM",
+      "level": "basic",
+      "questionType": "single",
+      "question": "アルゴリズムの良し悪しを比較する指標は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "見た目の美しさ"
+        },
+        {
+          "id": "B",
+          "text": "計算量"
+        },
+        {
+          "id": "C",
+          "text": "使用言語"
+        },
+        {
+          "id": "D",
+          "text": "ファイル名"
+        }
+      ],
+      "answer": "B",
+      "explanation": "処理にかかるステップ数の目安を計算量といい、O記法で表されます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-SEARCH",
+        "PROG-SORT"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-LOOP-Q06",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-LOOP",
+      "level": "basic",
+      "questionType": "single",
+      "question": "同じ処理を繰り返すプログラムの構造は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "分岐"
+        },
+        {
+          "id": "B",
+          "text": "逐次"
+        },
+        {
+          "id": "C",
+          "text": "反復"
+        },
+        {
+          "id": "D",
+          "text": "例外処理"
+        }
+      ],
+      "answer": "C",
+      "explanation": "同じ処理を繰り返す構造を反復（ループ）といいます。プログラムの基本構造の一つです。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-ALGORITHM",
+        "PROG-BRANCH"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-SEARCH-Q01",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-SEARCH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "探索アルゴリズムで、要素数nに対して計算量がO(log n)になるのは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "線形探索"
+        },
+        {
+          "id": "B",
+          "text": "二分探索"
+        },
+        {
+          "id": "C",
+          "text": "バブルソート"
+        },
+        {
+          "id": "D",
+          "text": "選択ソート"
+        }
+      ],
+      "answer": "B",
+      "explanation": "二分探索は探索範囲を半分ずつ絞り込むため、要素数が増えても効率よく探索できます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-ALGORITHM"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-BRANCH-Q06",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-BRANCH",
+      "level": "basic",
+      "questionType": "single",
+      "question": "条件によって処理を切り替えるプログラムの構造は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "逐次"
+        },
+        {
+          "id": "B",
+          "text": "分岐"
+        },
+        {
+          "id": "C",
+          "text": "反復"
+        },
+        {
+          "id": "D",
+          "text": "例外処理"
+        }
+      ],
+      "answer": "B",
+      "explanation": "条件に応じて実行する処理を切り替える構造を分岐といいます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-ALGORITHM",
+        "PROG-LOOP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-SORT-Q01",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-SORT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "データを一定の順序に並べ替える処理の目的は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "データを探しやすくする"
+        },
+        {
+          "id": "B",
+          "text": "データを暗号化する"
+        },
+        {
+          "id": "C",
+          "text": "データを削除する"
+        },
+        {
+          "id": "D",
+          "text": "データを圧縮する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "昇順・降順に並べ替える（ソートする）と、後の検索や処理がしやすくなります。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-ALGORITHM"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-SEQUENCE-Q06",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-SEQUENCE",
+      "level": "basic",
+      "questionType": "single",
+      "question": "処理の流れを図で表したものを何という？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "フローチャート"
+        },
+        {
+          "id": "B",
+          "text": "ヒストグラム"
+        },
+        {
+          "id": "C",
+          "text": "データベース"
+        },
+        {
+          "id": "D",
+          "text": "プロトコル"
+        }
+      ],
+      "answer": "A",
+      "explanation": "処理の流れを図で表したものをフローチャートといい、アルゴリズムを可視化するのに使われます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "PROG-ALGORITHM",
+        "PROG-BRANCH",
+        "PROG-LOOP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "PROG-ALGORITHM-Q02",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-ALGORITHM",
+      "level": "application",
+      "questionType": "single",
+      "question": "このとき、効率よく探索するために選ぶべき方法は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "先頭から1件ずつ確認する線形探索"
+        },
+        {
+          "id": "B",
+          "text": "範囲を半分ずつ絞り込む二分探索"
+        },
+        {
+          "id": "C",
+          "text": "データをすべてランダムに並べ替えてから探す"
+        },
+        {
+          "id": "D",
+          "text": "データを1件ずつ削除しながら探す"
+        }
+      ],
+      "answer": "B",
+      "explanation": "データが並んでいる場合、二分探索を使うと探索範囲を半分ずつ絞り込めるため、線形探索より効率よく目的のデータを見つけられます。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "PROG-SEARCH"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "1万件のデータの中から目的のデータを探すプログラムを作ることになった。データはあらかじめ昇順に並んでいる。"
+      }
+    },
+    {
+      "questionId": "PROG-ALGORITHM-Q03",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-ALGORITHM",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "一般的に、大量のデータを扱う場合に効率が良いといえるのは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "データの数が2倍になってもステップ数がわずかしか増えないプログラム"
+        },
+        {
+          "id": "B",
+          "text": "データの数が2倍になるとステップ数も2倍になるプログラム"
+        },
+        {
+          "id": "C",
+          "text": "どちらも同じ効率である"
+        },
+        {
+          "id": "D",
+          "text": "データの数とステップ数は関係がない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "計算量が小さい（データが増えてもステップ数の増加が緩やかな）アルゴリズムほど、大量のデータを扱う際に効率がよいといえます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "PROG-SEARCH",
+        "PROG-SORT"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "あるプログラムは、データの数が2倍になると、処理にかかるステップ数もおよそ2倍になる。別のプログラムは、データの数が2倍になっても、処理にかかるステップ数はわずかしか増えない。"
+      }
+    },
+    {
+      "questionId": "PROG-ALGORITHM-Q04",
+      "unit": "PROGRAMMING",
+      "knowledgeId": "PROG-ALGORITHM",
+      "level": "integrated",
+      "questionType": "single",
+      "question": "効率よく検索を行うための工夫として最も適切なものは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "あらかじめデータをソートしておき、二分探索で検索する"
+        },
+        {
+          "id": "B",
+          "text": "検索のたびにデータをランダムに並べ替える"
+        },
+        {
+          "id": "C",
+          "text": "データを1件ずつ手作業で確認する"
+        },
+        {
+          "id": "D",
+          "text": "検索のたびにすべてのデータを削除して作り直す"
+        }
+      ],
+      "answer": "A",
+      "explanation": "あらかじめデータをソート（並べ替え）しておくことで二分探索が使えるようになり、検索を効率化できます。ソートと探索の組み合わせが計算量の削減につながります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "PROG-SEARCH",
+        "PROG-SORT"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "大量のデータの中から特定のデータを何度も検索するプログラムを作ることになった。データは検索のたびに変化しない。"
+      }
+    },
+    {
+      "questionId": "NET-HTTP-Q06",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTP",
+      "level": "basic",
+      "questionType": "single",
+      "question": "Webページを閲覧する際に主に使われるプロトコルは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "SMTP"
+        },
+        {
+          "id": "B",
+          "text": "FTP"
+        },
+        {
+          "id": "C",
+          "text": "HTTP"
+        },
+        {
+          "id": "D",
+          "text": "DNS"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Webブラウザとサーバーがページ情報をやり取りする際の通信規約（プロトコル）がHTTPです。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "NET-URL",
+        "NET-DNS"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-IP-Q06",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-IP",
+      "level": "basic",
+      "questionType": "single",
+      "question": "IPアドレスの役割は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "機器を一意に識別する"
+        },
+        {
+          "id": "B",
+          "text": "データを暗号化する"
+        },
+        {
+          "id": "C",
+          "text": "画面を表示する"
+        },
+        {
+          "id": "D",
+          "text": "電力を供給する"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ネットワーク上の機器を識別するための番号がIPアドレスです。住所のような役割を果たします。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "NET-DNS",
+        "NET-URL"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-DNS-Q06",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-DNS",
+      "level": "basic",
+      "questionType": "single",
+      "question": "ドメイン名をIPアドレスに変換する仕組みは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "DNS"
+        },
+        {
+          "id": "B",
+          "text": "URL"
+        },
+        {
+          "id": "C",
+          "text": "HTTP"
+        },
+        {
+          "id": "D",
+          "text": "IPアドレス"
+        }
+      ],
+      "answer": "A",
+      "explanation": "人が覚えやすいドメイン名を、機器が使うIPアドレスに変換する仕組みをDNSといいます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "NET-IP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "SEC-CRYPT-Q06",
+      "unit": "SECURITY",
+      "knowledgeId": "SEC-CRYPT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "通信内容を第三者から守るための技術は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "HTML"
+        },
+        {
+          "id": "B",
+          "text": "暗号化"
+        },
+        {
+          "id": "C",
+          "text": "ピクセル"
+        },
+        {
+          "id": "D",
+          "text": "キャッシュ"
+        }
+      ],
+      "answer": "B",
+      "explanation": "通信内容を第三者に読み取られないようにする技術を暗号化といいます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "NET-HTTP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-URL-Q06",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-URL",
+      "level": "basic",
+      "questionType": "single",
+      "question": "インターネット上の情報の場所を示す文字列は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "URL"
+        },
+        {
+          "id": "B",
+          "text": "DNS"
+        },
+        {
+          "id": "C",
+          "text": "IPアドレス"
+        },
+        {
+          "id": "D",
+          "text": "HTTP"
+        }
+      ],
+      "answer": "A",
+      "explanation": "インターネット上の情報の場所を示す文字列をURLといいます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "NET-DNS"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-WIFI-Q01",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-WIFI",
+      "level": "basic",
+      "questionType": "single",
+      "question": "ケーブルなしで機器をネットワークに接続する無線通信の規格は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Wi-Fi"
+        },
+        {
+          "id": "B",
+          "text": "USB"
+        },
+        {
+          "id": "C",
+          "text": "HDMI"
+        },
+        {
+          "id": "D",
+          "text": "SDカード"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ケーブルを使わずに機器をネットワークに接続する無線通信の規格をWi-Fiといいます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "NET-IP"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "NET-IP-Q07",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-IP",
+      "level": "application",
+      "questionType": "single",
+      "question": "このとき、各機器に割り当てられている固有の番号を何というか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "IPアドレス"
+        },
+        {
+          "id": "B",
+          "text": "パスワード"
+        },
+        {
+          "id": "C",
+          "text": "ファイル名"
+        },
+        {
+          "id": "D",
+          "text": "ポート名"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ネットワーク上の機器を識別するための番号がIPアドレスです。ルーターは接続された機器ごとにIPアドレスを割り当てて区別します。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "NET-DNS",
+        "NET-URL"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "家庭内のルーターには、複数の機器が接続されている。それぞれの機器を区別して通信するために、ルーターは各機器に固有の番号を割り当てている。"
+      }
+    },
+    {
+      "questionId": "NET-IP-Q08",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-IP",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "この番号の並びが表しているものとして最も適切なものは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "それぞれのPCを識別するIPアドレス"
+        },
+        {
+          "id": "B",
+          "text": "PCのパスワード"
+        },
+        {
+          "id": "C",
+          "text": "ネットワークの回線速度"
+        },
+        {
+          "id": "D",
+          "text": "PCの購入日"
+        }
+      ],
+      "answer": "A",
+      "explanation": "192.168.1.1のような形式の番号はIPアドレスであり、ネットワーク上の機器を一つずつ識別するために使われます。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "NET-DNS"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "ある学校のネットワークでは、教室のPCに192.168.1.1から192.168.1.40までの番号が割り当てられている。"
+      }
+    },
+    {
+      "questionId": "NET-DNS-Q07",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-DNS",
+      "level": "application",
+      "questionType": "single",
+      "question": "このエラーの原因として考えられることは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ドメイン名をIPアドレスに変換する仕組みがうまく働いていない"
+        },
+        {
+          "id": "B",
+          "text": "キーボードの電池が切れている"
+        },
+        {
+          "id": "C",
+          "text": "画面の明るさが低すぎる"
+        },
+        {
+          "id": "D",
+          "text": "マウスが接続されていない"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ドメイン名をIPアドレスに変換する仕組みがDNSです。DNSがうまく機能しないと、ドメイン名を入力してもサーバーに接続できません。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "NET-IP"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "ブラウザにWebサイトのドメイン名を入力してアクセスしようとしたが、ページが表示されず、「サーバーが見つかりません」というエラーが出た。"
+      }
+    },
+    {
+      "questionId": "NET-DNS-Q08",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-DNS",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "この表のような対応関係を管理し、ドメイン名からIPアドレスへの変換を行う仕組みは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "DNS"
+        },
+        {
+          "id": "B",
+          "text": "HTTP"
+        },
+        {
+          "id": "C",
+          "text": "URL"
+        },
+        {
+          "id": "D",
+          "text": "Wi-Fi"
+        }
+      ],
+      "answer": "A",
+      "explanation": "ドメイン名とIPアドレスの対応を管理し、変換を行う仕組みがDNSです。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "NET-IP",
+        "NET-URL"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "表は、あるドメイン名とそれに対応するIPアドレスの一部である。",
+        "table": {
+          "headers": [
+            "ドメイン名",
+            "IPアドレス"
+          ],
+          "rows": [
+            [
+              "example.jp",
+              "203.0.113.10"
+            ],
+            [
+              "school.jp",
+              "203.0.113.25"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "questionId": "NET-HTTPS-Q06",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTPS",
+      "level": "application",
+      "questionType": "single",
+      "question": "「https」の「s」が示していることとして最も適切なものは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "通信が暗号化されていること"
+        },
+        {
+          "id": "B",
+          "text": "ページの表示速度が速いこと"
+        },
+        {
+          "id": "C",
+          "text": "画像が多く使われていること"
+        },
+        {
+          "id": "D",
+          "text": "広告が表示されないこと"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTPS（HTTP＋暗号化）では通信内容が暗号化され、第三者に読み取られにくくなります。「s」はセキュア（secure）を表します。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "NET-URL",
+        "SEC-CRYPT"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "あるオンラインショップの支払いページのURLは「https://」から始まっていた。"
+      }
+    },
+    {
+      "questionId": "NET-HTTP-Q07",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-HTTP",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "②の「サーバーにページの情報を要求する」際に使われる通信の約束事は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "HTTP"
+        },
+        {
+          "id": "B",
+          "text": "DNS"
+        },
+        {
+          "id": "C",
+          "text": "IPアドレス"
+        },
+        {
+          "id": "D",
+          "text": "Wi-Fi"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Webブラウザとサーバーがページ情報をやり取りする際の通信規約がHTTPです。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "NET-URL",
+        "NET-DNS"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "Webブラウザでページを表示するまでの流れを簡単に表すと、次のようになる。\n① ドメイン名をIPアドレスに変換する\n② サーバーにページの情報を要求する\n③ ページの情報を受け取り表示する"
+      }
+    },
+    {
+      "questionId": "NET-IP-Q09",
+      "unit": "NETWORK",
+      "knowledgeId": "NET-IP",
+      "level": "integrated",
+      "questionType": "single",
+      "question": "A〜Dを正しい順序に並べたものは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "B→D→A→C"
+        },
+        {
+          "id": "B",
+          "text": "D→B→A→C"
+        },
+        {
+          "id": "C",
+          "text": "B→A→D→C"
+        },
+        {
+          "id": "D",
+          "text": "D→A→B→C"
+        }
+      ],
+      "answer": "A",
+      "explanation": "まずドメイン名がDNSによってIPアドレスに変換され（B）、そのIPアドレス宛にHTTPでページが要求され（D）、サーバーから情報が送られ（A）、最後にブラウザに表示されます（C）。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "NET-DNS",
+        "NET-URL",
+        "NET-HTTP"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "ブラウザにWebサイトのURLを入力してからページが表示されるまでの流れを、次の4つの出来事に分けた。\nA. サーバーからページの情報が送られてくる\nB. ドメイン名がIPアドレスに変換される\nC. ブラウザにページが表示される\nD. サーバーにページの情報が要求される"
+      }
+    },
+    {
+      "questionId": "DATA-HIST-Q06",
+      "unit": "DATA",
+      "knowledgeId": "DATA-HIST",
+      "level": "basic",
+      "questionType": "single",
+      "question": "次のうち、データの分布を見るのに最も適したグラフは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ヒストグラム"
+        },
+        {
+          "id": "B",
+          "text": "円グラフ"
+        },
+        {
+          "id": "C",
+          "text": "折れ線グラフ"
+        },
+        {
+          "id": "D",
+          "text": "散布図"
+        }
+      ],
+      "answer": "A",
+      "explanation": "データがどの範囲に多く分布しているかを、棒の高さで表すグラフがヒストグラムです。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-SCATTER"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-SCATTER-Q06",
+      "unit": "DATA",
+      "knowledgeId": "DATA-SCATTER",
+      "level": "basic",
+      "questionType": "single",
+      "question": "2つの量的データの関係を調べるのに使うグラフは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "散布図"
+        },
+        {
+          "id": "B",
+          "text": "棒グラフ"
+        },
+        {
+          "id": "C",
+          "text": "円グラフ"
+        },
+        {
+          "id": "D",
+          "text": "ヒストグラム"
+        }
+      ],
+      "answer": "A",
+      "explanation": "2つの量的データの関係性を点の集まりで表すグラフを散布図といいます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-HIST"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-STAT-Q06",
+      "unit": "DATA",
+      "knowledgeId": "DATA-STAT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "データのばらつきの大きさを示す指標は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "平均値"
+        },
+        {
+          "id": "B",
+          "text": "標準偏差"
+        },
+        {
+          "id": "C",
+          "text": "中央値"
+        },
+        {
+          "id": "D",
+          "text": "最頻値"
+        }
+      ],
+      "answer": "B",
+      "explanation": "データの散らばり具合を数値で表したものが標準偏差です。値が大きいほどばらつきが大きいことを示します。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-SCATTER"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-DECISION-Q06",
+      "unit": "DATA",
+      "knowledgeId": "DATA-DECISION",
+      "level": "basic",
+      "questionType": "single",
+      "question": "大量のデータから規則性を見つけ出し役立てることの総称は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "データの活用"
+        },
+        {
+          "id": "B",
+          "text": "データ入力"
+        },
+        {
+          "id": "C",
+          "text": "データ削除"
+        },
+        {
+          "id": "D",
+          "text": "データ印刷"
+        }
+      ],
+      "answer": "A",
+      "explanation": "大量のデータを分析し、規則性や傾向を見つけて役立てることをデータの活用といいます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-HIST",
+        "DATA-SCATTER"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-DECISION-Q07",
+      "unit": "DATA",
+      "knowledgeId": "DATA-DECISION",
+      "level": "basic",
+      "questionType": "single",
+      "question": "グラフを作る際に注意すべきことは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "できるだけ派手にする"
+        },
+        {
+          "id": "B",
+          "text": "誤解を与えない表現にする"
+        },
+        {
+          "id": "C",
+          "text": "データを全部隠す"
+        },
+        {
+          "id": "D",
+          "text": "数値を丸めすぎる"
+        }
+      ],
+      "answer": "B",
+      "explanation": "軸の範囲やグラフの種類によって印象が変わるため、誤解を与えないように表現することが大切です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DATA-HIST",
+        "DATA-SCATTER"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DATA-HIST-Q07",
+      "unit": "DATA",
+      "knowledgeId": "DATA-HIST",
+      "level": "application",
+      "questionType": "single",
+      "question": "このような得点の散らばり方を視覚的に確認するのに適したグラフは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ヒストグラム"
+        },
+        {
+          "id": "B",
+          "text": "円グラフ"
+        },
+        {
+          "id": "C",
+          "text": "折れ線グラフ"
+        },
+        {
+          "id": "D",
+          "text": "ピクトグラム"
+        }
+      ],
+      "answer": "A",
+      "explanation": "得点などのデータがどの範囲に多く集まっているかという分布を見るには、ヒストグラムが適しています。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DATA-SCATTER"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "あるクラスの小テストの得点を集計したところ、60点台の生徒が最も多く、点数が離れるほど人数が少なくなる傾向が見られた。"
+      }
+    },
+    {
+      "questionId": "DATA-HIST-Q08",
+      "unit": "DATA",
+      "knowledgeId": "DATA-HIST",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "この表の内容をグラフに表す場合、最も適切なグラフは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ヒストグラム"
+        },
+        {
+          "id": "B",
+          "text": "円グラフ"
+        },
+        {
+          "id": "C",
+          "text": "散布図"
+        },
+        {
+          "id": "D",
+          "text": "ピクトグラム"
+        }
+      ],
+      "answer": "A",
+      "explanation": "区切られた範囲ごとの人数（度数）を棒の高さで表すヒストグラムが、この表の内容を表すのに適しています。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DATA-DECISION"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "表は、あるクラス40人の小テストの得点を10点ごとに区切って人数をまとめたものである。",
+        "table": {
+          "headers": [
+            "得点の範囲",
+            "人数"
+          ],
+          "rows": [
+            [
+              "0〜19点",
+              "2人"
+            ],
+            [
+              "20〜39点",
+              "5人"
+            ],
+            [
+              "40〜59点",
+              "10人"
+            ],
+            [
+              "60〜79点",
+              "15人"
+            ],
+            [
+              "80〜100点",
+              "8人"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "questionId": "DATA-HIST-Q09",
+      "unit": "DATA",
+      "knowledgeId": "DATA-HIST",
+      "level": "integrated",
+      "questionType": "single",
+      "question": "この分析の流れの中で、「得点の分布を確認する」段階と「練習時間と得点の関係を確認する」段階で、それぞれ使うのに適したグラフの組み合わせは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "ヒストグラムと散布図"
+        },
+        {
+          "id": "B",
+          "text": "円グラフと折れ線グラフ"
+        },
+        {
+          "id": "C",
+          "text": "散布図とヒストグラム"
+        },
+        {
+          "id": "D",
+          "text": "ピクトグラムと円グラフ"
+        }
+      ],
+      "answer": "A",
+      "explanation": "分布を見るにはヒストグラム、2つの量の関係を見るには散布図が適しています。このように複数のグラフを目的に応じて使い分けることが、データの活用につながります。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DATA-SCATTER",
+        "DATA-DECISION"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "あるクラブの活動データを分析することになった。まず得点の分布を確認し、次に練習時間と得点の関係を確認し、最後にそれらをふまえて今後の練習方針を考えることにした。"
+      }
+    },
+    {
+      "questionId": "DIG-BIN-Q06",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "basic",
+      "questionType": "single",
+      "question": "2進数の1101において、一番左の桁（最上位ビット）が表す10進数の値は？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "D",
+      "explanation": "2進数の各桁は右から2の0乗、2の1乗、2の2乗…の位を表します。4桁目（左端）は2の3乗＝8の位です。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIN-Q07",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "basic",
+      "questionType": "single",
+      "question": "2進数の1011を10進数に変換すると？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "11"
+        },
+        {
+          "id": "C",
+          "text": "13"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "answer": "B",
+      "explanation": "1011は、8の位が1、4の位が0、2の位が1、1の位が1なので、8+0+2+1=11になります。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIN-Q08",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "basic",
+      "questionType": "single",
+      "question": "2進数の1100を10進数に変換すると？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "14"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "answer": "B",
+      "explanation": "1100は、8の位が1、4の位が1、2の位が0、1の位が0なので、8+4=12になります。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIN-Q09",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "basic",
+      "questionType": "single",
+      "question": "2進数の0111を10進数に変換すると？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "C",
+      "explanation": "0111は、4の位が1、2の位が1、1の位が1なので、4+2+1=7になります。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIN-Q10",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "application",
+      "questionType": "single",
+      "question": "この値を10進数で表すといくつか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "11"
+        },
+        {
+          "id": "D",
+          "text": "13"
+        }
+      ],
+      "answer": "C",
+      "explanation": "1011を10進数に変換すると、8+0+2+1=11になります。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "あるセンサーは、測定値を4ビットの2進数で記録している。記録された値が1011だった。"
+      }
+    },
+    {
+      "questionId": "DIG-BIN-Q11",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "application",
+      "questionType": "single",
+      "question": "この設定値を10進数で表すといくつか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "C",
+      "explanation": "1001を10進数に変換すると、8+0+0+1=9になります。",
+      "skill": "application",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "ある照明のコントローラーは、明るさの設定を4ビットの2進数で管理している。現在の設定値は1001である。"
+      }
+    },
+    {
+      "questionId": "DIG-BIN-Q12",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "状態Aと状態Bを10進数に変換したとき、その差はいくつか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "B",
+      "explanation": "状態Aは1011＝11、状態Bは0110＝6です。文章から2つの値を読み取り、それぞれ10進数に変換してから差を求めると、11－6＝5になります。",
+      "skill": "analysis",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "ある装置では、状態を4ビットの2進数で記録している。状態Aは1011、状態Bは0110である。"
+      }
+    },
+    {
+      "questionId": "DIG-BIN-Q13",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "commonTestMini",
+      "questionType": "single",
+      "question": "優先度Xと優先度Yを10進数に変換したとき、値が大きいのはどちらか、またその差はいくつか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Xの方が3大きい"
+        },
+        {
+          "id": "B",
+          "text": "Yの方が3大きい"
+        },
+        {
+          "id": "C",
+          "text": "Xの方が5大きい"
+        },
+        {
+          "id": "D",
+          "text": "Yの方が2大きい"
+        }
+      ],
+      "answer": "A",
+      "explanation": "優先度Xは1101＝13、優先度Yは1010＝10です。それぞれ変換してから比較すると、Xの方が3大きいことがわかります。",
+      "skill": "analysis",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "あるシステムでは、通知の優先度を4ビットの2進数で表している。優先度Xは1101、優先度Yは1010である。"
+      }
+    },
+    {
+      "questionId": "DIG-BIN-Q14",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "integrated",
+      "questionType": "single",
+      "question": "このセンサーが記録した値が1110のとき、10進数で表した値と、4ビットで表現できる値の最大数の組み合わせとして正しいものは？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "10進数14、最大16通り"
+        },
+        {
+          "id": "B",
+          "text": "10進数14、最大15通り"
+        },
+        {
+          "id": "C",
+          "text": "10進数15、最大16通り"
+        },
+        {
+          "id": "D",
+          "text": "10進数12、最大16通り"
+        }
+      ],
+      "answer": "A",
+      "explanation": "1110を10進数に変換すると8+4+2=14です。4ビットでは0000〜1111の16通り（2の4乗）の値を表現できます。10進数への変換とビット数の知識を組み合わせて答える問題です。",
+      "skill": "analysis",
+      "relatedKnowledge": [
+        "DIG-BIT"
+      ],
+      "reviewStatus": "draft",
+      "stimulus": {
+        "text": "ある温度センサーは、測定値を4ビットの2進数で記録している。記録できる値の範囲は0000から1111までである。"
+      }
+    },
+    {
+      "questionId": "DIG-BIN-Q15",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "basic",
+      "questionType": "single",
+      "question": "10進数の13を2進数で表すと？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "1101"
+        },
+        {
+          "id": "B",
+          "text": "1011"
+        },
+        {
+          "id": "C",
+          "text": "1110"
+        },
+        {
+          "id": "D",
+          "text": "1010"
+        }
+      ],
+      "answer": "A",
+      "explanation": "13は8+4+1なので、8の位・4の位・1の位が1、2の位が0となり、1101と表されます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIT-Q06",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIT",
+      "level": "basic",
+      "questionType": "single",
+      "question": "4ビットの2進数で表現できる数は何通りか。",
+      "choices": [
+        {
+          "id": "A",
+          "text": "8通り"
+        },
+        {
+          "id": "B",
+          "text": "15通り"
+        },
+        {
+          "id": "C",
+          "text": "16通り"
+        },
+        {
+          "id": "D",
+          "text": "32通り"
+        }
+      ],
+      "answer": "C",
+      "explanation": "1ビットにつき2通りの状態を表せるため、4ビットでは2の4乗＝16通りの値を表現できます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [
+        "DIG-BIN"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "DIG-BIN-Q16",
+      "unit": "DIGITAL",
+      "knowledgeId": "DIG-BIN",
+      "level": "basic",
+      "questionType": "single",
+      "question": "2進数の0011と0101を足すと？",
+      "choices": [
+        {
+          "id": "A",
+          "text": "1000"
+        },
+        {
+          "id": "B",
+          "text": "0111"
+        },
+        {
+          "id": "C",
+          "text": "1001"
+        },
+        {
+          "id": "D",
+          "text": "0110"
+        }
+      ],
+      "answer": "A",
+      "explanation": "0011（10進数で3）と0101（10進数で5）を足すと10進数で8になり、2進数では1000と表されます。",
+      "skill": "knowledge",
+      "relatedKnowledge": [],
+      "reviewStatus": "draft"
+    }
+  ]
+}
